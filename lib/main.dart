@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       fallbackLocale: Locale('en', 'US'),
       title: 'school_app',
       initialBinding: InitialBindings(),
-      initialRoute: AppRoutes.initialRoute,
+      initialRoute: AppRoutes.coverScreen,
       getPages: AppRoutes.pages,
     );
   }

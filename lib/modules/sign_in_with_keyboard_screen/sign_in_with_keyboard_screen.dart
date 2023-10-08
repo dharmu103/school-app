@@ -73,7 +73,9 @@ class SignInWithKeyboardScreen extends GetWidget<SignInWithKeyboardController> {
                           SizedBox(height: 29.v),
                           CustomElevatedButton(
                             text: "lbl_log_in".tr,
-                            onTap: () {},
+                            onTap: () {
+                              Get.toNamed(AppRoutes.homeScreen);
+                            },
                           ),
                           SizedBox(height: 5.v)
                         ])))));

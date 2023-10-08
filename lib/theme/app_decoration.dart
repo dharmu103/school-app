@@ -167,15 +167,22 @@ class BorderRadiusStyle {
   static BorderRadius get roundedBorder35 => BorderRadius.circular(
         35.h,
       );
+  static BorderRadius get roundedBorderUp35 => BorderRadius.only(
+      topLeft: Radius.circular(
+        35.h,
+      ),
+      topRight: Radius.circular(
+        35.h,
+      ));
   static BorderRadius get roundedBorder6 => BorderRadius.circular(
         6.h,
       );
 }
 
 // Comment/Uncomment the below code based on your Flutter SDK version.
-    
+
 // For Flutter SDK Version 3.7.2 or greater.
-    
+
 double get strokeAlignInside => BorderSide.strokeAlignInside;
 
 double get strokeAlignCenter => BorderSide.strokeAlignCenter;
@@ -189,4 +196,3 @@ double get strokeAlignOutside => BorderSide.strokeAlignOutside;
 // StrokeAlign get strokeAlignCenter => StrokeAlign.center;
 //
 // StrokeAlign get strokeAlignOutside => StrokeAlign.outside;
-    

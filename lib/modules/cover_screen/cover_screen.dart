@@ -21,7 +21,7 @@ class CoverScreen extends StatelessWidget {
                 colors: [Color(0x33008083), Color(0xFF008083)],
               ),
               image: DecorationImage(
-                  image: AssetImage(ImageConstant.imgsplash),
+                  image: AssetImage(ImageConstant.imgSplash),
                   opacity: 0.2,
                   fit: BoxFit.cover)),
           child: Container(
