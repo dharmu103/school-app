@@ -42,6 +42,14 @@ class CustomButtonStyles {
           borderRadius: BorderRadius.circular(28.h),
         ),
       );
+
+  static ButtonStyle get outLineBorderPrimary => ElevatedButton.styleFrom(
+        backgroundColor: Colors.white,
+        // textStyle: TextStyle(color: Colors.black),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(28.h),
+            side: BorderSide(color: theme.colorScheme.primary, width: 1)),
+      );
   static ButtonStyle get fillRed => ElevatedButton.styleFrom(
         backgroundColor: appTheme.red600,
         shape: RoundedRectangleBorder(
@@ -57,6 +65,7 @@ class CustomButtonStyles {
 
   // Gradient button style
   static BoxDecoration get gradientPrimaryToTealDecoration => BoxDecoration(
+        borderRadius: BorderRadius.circular(10.h),
         gradient: LinearGradient(
           begin: Alignment(0.58, 1),
           end: Alignment(1.4, 0),

@@ -2,37 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:school_app/core/app_export.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  CustomTextFormField({
-    Key? key,
-    this.alignment,
-    this.width,
-    this.margin,
-    this.controller,
-    this.focusNode,
-    this.autofocus = true,
-    this.textStyle,
-    this.obscureText = false,
-    this.textInputAction = TextInputAction.next,
-    this.textInputType = TextInputType.text,
-    this.maxLines,
-    this.hintText,
-    this.hintStyle,
-    this.prefix,
-    this.prefixConstraints,
-    this.suffix,
-    this.suffixConstraints,
-    this.contentPadding,
-    this.borderDecoration,
-    this.fillColor,
-    this.filled = true,
-    this.validator,
-  }) : super(
+  CustomTextFormField(
+      {Key? key,
+      this.alignment,
+      this.width,
+      this.height,
+      this.margin,
+      this.controller,
+      this.focusNode,
+      this.autofocus = true,
+      this.textStyle,
+      this.obscureText = false,
+      this.textInputAction = TextInputAction.next,
+      this.textInputType = TextInputType.text,
+      this.maxLines,
+      this.hintText,
+      this.hintStyle,
+      this.prefix,
+      this.prefixConstraints,
+      this.suffix,
+      this.suffixConstraints,
+      this.contentPadding,
+      this.borderDecoration,
+      this.fillColor,
+      this.filled = true,
+      this.validator,
+      this.textAlign})
+      : super(
           key: key,
         );
 
   final Alignment? alignment;
 
   final double? width;
+  final double? height;
 
   final EdgeInsetsGeometry? margin;
 
@@ -71,7 +74,7 @@ class CustomTextFormField extends StatelessWidget {
   final Color? fillColor;
 
   final bool? filled;
-
+  final TextAlign? textAlign;
   final FormFieldValidator<String>? validator;
 
   @override
@@ -86,6 +89,7 @@ class CustomTextFormField extends StatelessWidget {
 
   Widget get textFormFieldWidget => Container(
         width: width ?? double.maxFinite,
+        height: height ?? 40.v,
         margin: margin,
         child: TextFormField(
           controller: controller,
@@ -98,6 +102,7 @@ class CustomTextFormField extends StatelessWidget {
           maxLines: maxLines ?? 1,
           decoration: decoration,
           validator: validator,
+          textAlign: textAlign ?? TextAlign.left,
         ),
       );
   InputDecoration get decoration => InputDecoration(

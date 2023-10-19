@@ -96,6 +96,33 @@ class ThemeHelper {
         space: 1,
         color: appTheme.black900.withOpacity(0.2),
       ),
+      bottomNavigationBarTheme:
+          BottomNavigationBarThemeData(backgroundColor: Colors.transparent),
+      bottomAppBarTheme:
+          BottomAppBarTheme(color: Colors.transparent, height: 20),
+      datePickerTheme: DatePickerThemeData(
+          weekdayStyle: TextStyle(
+            fontSize: 15,
+            color: Colors.black,
+          ),
+          dayStyle: TextStyle(
+            fontSize: 15,
+            color: Colors.black,
+          ),
+          headerHeadlineStyle: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+          headerHelpStyle: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+          dayForegroundColor: MaterialStateColor.resolveWith((states) {
+            if (DateTime.sunday == DateTime.utc(2023)) {
+              print("object");
+            }
+            return Colors.black;
+          })),
     );
   }
 

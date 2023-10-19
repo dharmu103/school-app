@@ -73,14 +73,15 @@ class AppDecoration {
   // Outline decorations
   static BoxDecoration get outlineBlack => BoxDecoration(
         color: theme.colorScheme.onErrorContainer.withOpacity(1),
+        borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
             color: appTheme.black900.withOpacity(0.1),
-            spreadRadius: 2.h,
-            blurRadius: 2.h,
+            spreadRadius: 0.5.h,
+            blurRadius: .5.h,
             offset: Offset(
               0,
-              4,
+              0,
             ),
           ),
         ],
@@ -173,6 +174,13 @@ class BorderRadiusStyle {
       ),
       topRight: Radius.circular(
         35.h,
+      ));
+  static BorderRadius get roundedBorderUp25 => BorderRadius.only(
+      topLeft: Radius.circular(
+        25.h,
+      ),
+      topRight: Radius.circular(
+        25.h,
       ));
   static BorderRadius get roundedBorder6 => BorderRadius.circular(
         6.h,
