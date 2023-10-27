@@ -1,6 +1,7 @@
 import 'package:clean_calendar/clean_calendar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:school_app/widgets/custom_app_bar_widget.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 import '../../../widgets/custom_image_view.dart';
 import 'controller/attendence_controller.dart';
@@ -220,111 +221,308 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
           extendBody: true,
           extendBodyBehindAppBar: true,
           appBar: CustomAppBar(
-            leading: CustomImageView(
-                margin: EdgeInsets.only(left: 24.h),
-                svgPath: ImageConstant.imgArrowleftOnerrorcontainer),
             title: "Attendence",
           ),
-          body: SingleChildScrollView(
-            child: Container(
-                width: Get.width,
-                // height: Get.height,
-                //   padding: EdgeInsets.only(top: 53.v),
-                decoration: BoxDecoration(
-                  color: Colors.black,
-                  gradient: LinearGradient(
-                    begin: Alignment(0.5, 0),
-                    end: Alignment(0.5, 1),
-                    colors: [
-                      theme.colorScheme.onErrorContainer.withOpacity(1),
-                      theme.colorScheme.onErrorContainer.withOpacity(0),
-                    ],
-                  ),
+          body: Container(
+              width: Get.width,
+              height: Get.height,
+              //   padding: EdgeInsets.only(top: 53.v),
+              decoration: BoxDecoration(
+                color: Colors.black,
+                gradient: LinearGradient(
+                  begin: Alignment(0.5, 0),
+                  end: Alignment(0.5, 1),
+                  colors: [
+                    theme.colorScheme.onErrorContainer.withOpacity(1),
+                    theme.colorScheme.onErrorContainer.withOpacity(0),
+                  ],
                 ),
-                child: Stack(
-                  children: [
-                    Align(
-                      alignment: Alignment.center,
-                      child: Container(
-                        height: Get.height,
-                        width: double.maxFinite,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment(1.56, 0.48),
-                            end: Alignment(0.5, -0.53),
-                            colors: [
-                              theme.colorScheme.primary,
-                              appTheme.teal300,
+              ),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      height: Get.height,
+                      width: double.maxFinite,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment(1.56, 0.48),
+                          end: Alignment(0.5, -0.53),
+                          colors: [
+                            theme.colorScheme.primary,
+                            appTheme.teal300,
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  CustomImageView(
+                    svgPath: ImageConstant.imgStarpattern,
+                    height: 62.v,
+                    width: 333.h,
+                    alignment: Alignment.topCenter,
+                    margin: EdgeInsets.only(top: 116.v),
+                  ),
+                  CustomImageView(
+                    svgPath: ImageConstant.imgStarpattern,
+                    height: 62.v,
+                    width: 333.h,
+                    alignment: Alignment.topCenter,
+                    margin: EdgeInsets.only(top: 70.v),
+                  ),
+                  Container(
+                    width: Get.width,
+                    height: double.maxFinite,
+                    margin: EdgeInsets.only(top: 93.v),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadiusStyle.roundedBorderUp25,
+                    ),
+                    child: SingleChildScrollView(
+                      physics: ScrollPhysics(),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(
+                                left: 24.h, top: 18.v, right: 12.h),
+                            child: Container(
+                              height: Get.height * 0.42,
+                              child: SfDateRangePicker(
+                                headerHeight: 50.v,
+                                headerStyle: DateRangePickerHeaderStyle(
+                                    textStyle:
+                                        CustomTextStyles.titleMediumBlack900),
+                                selectionTextStyle:
+                                    CustomTextStyles.titleMediumBluegray900,
+                                onSelectionChanged: (v) {},
+                                selectionMode:
+                                    DateRangePickerSelectionMode.single,
+                                monthCellStyle: DateRangePickerMonthCellStyle(
+                                    todayTextStyle:
+                                        CustomTextStyles.titleMediumBluegray900,
+                                    specialDatesTextStyle: CustomTextStyles
+                                        .titleMediumBluegray900
+                                        ?.copyWith(color: Colors.white),
+                                    specialDatesDecoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: appTheme.red700),
+                                    textStyle:
+                                        CustomTextStyles.titleMediumBluegray900,
+                                    weekendTextStyle:
+                                        CustomTextStyles.titleMediumRedA700,
+                                    //   leadingDatesTextStyle:
+                                    //       CustomTextStyles.bodyMedium13,
+                                    //   trailingDatesTextStyle:
+                                    //       CustomTextStyles.bodyMedium13,
+                                    blackoutDateTextStyle:
+                                        CustomTextStyles.titleMediumRedA700),
+                                monthViewSettings:
+                                    DateRangePickerMonthViewSettings(
+                                        numberOfWeeksInView: 6,
+                                        //   showTrailingAndLeadingDates: true,
+                                        viewHeaderStyle:
+                                            DateRangePickerViewHeaderStyle(
+                                                textStyle: CustomTextStyles
+                                                    .titleMediumBluegray900),
+                                        firstDayOfWeek: 7,
+                                        weekendDays: [
+                                      7
+                                    ],
+                                        specialDates: [
+                                      DateTime(2023, 10, 10),
+                                      DateTime(2023, 10, 26)
+                                    ]),
+                                initialSelectedRange: PickerDateRange(
+                                    DateTime.now()
+                                        .subtract(const Duration(days: 4)),
+                                    DateTime.now()
+                                        .add(const Duration(days: 3))),
+                              ),
+                            ),
+                          ),
+                          Row(
+                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                width: 24.h,
+                              ),
+                              Container(
+                                width: Get.width * 0.42,
+                                decoration: AppDecoration.fillGray.copyWith(
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(18.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "26",
+                                        style: theme.textTheme.titleLarge
+                                            ?.copyWith(fontSize: 26),
+                                      ),
+                                      Text(
+                                        "Working Days",
+                                        style: theme.textTheme.titleSmall,
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Spacer(),
+                              Container(
+                                width: Get.width * 0.42,
+                                decoration: AppDecoration.fillGray.copyWith(
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(18.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "24",
+                                        style: theme.textTheme.titleLarge
+                                            ?.copyWith(fontSize: 26),
+                                      ),
+                                      Text(
+                                        "Present Days",
+                                        style: theme.textTheme.titleSmall,
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 24.h,
+                              ),
                             ],
                           ),
-                        ),
-                      ),
-                    ),
-                    CustomImageView(
-                      svgPath: ImageConstant.imgStarpattern,
-                      height: 62.v,
-                      width: 333.h,
-                      alignment: Alignment.topCenter,
-                      margin: EdgeInsets.only(top: 116.v),
-                    ),
-                    CustomImageView(
-                      svgPath: ImageConstant.imgStarpattern,
-                      height: 62.v,
-                      width: 333.h,
-                      alignment: Alignment.topCenter,
-                      margin: EdgeInsets.only(top: 70.v),
-                    ),
-                    Positioned(
-                      top: 93.v,
-                      child: Container(
-                        width: Get.width,
-                        height: Get.height,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadiusStyle.roundedBorderUp35,
-                        ),
-                      ),
-                    ),
-                    SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          //   Container(
-                          //     width: Get.width,
-                          //     height: 400,
-                          //     child: CleanCalendar(
-                          //       dateSelectionMode:
-                          //           DatePickerSelectionMode.disable,
-                          //       weekdaysSymbol: Weekdays(
-                          //           monday: "M",
-                          //           tuesday: "T",
-                          //           wednesday: "W",
-                          //           thursday: "T",
-                          //           friday: "F",
-                          //           saturday: "S",
-                          //           sunday: "S"),
-                          //     ),
-                          //   ),
-                          //   DateRangePickerDialog(
-                          //       firstDate: DateTime(2022),
-                          //       lastDate: DateTime(2024)),
-
-                          CalendarDatePicker(
-                              initialCalendarMode: DatePickerMode.year,
-                              initialDate: DateTime.now(),
-                              firstDate: DateTime(2022),
-                              lastDate: DateTime(2024),
-                              onDateChanged: (date) {}),
-
-                          Lists2ItemWidget()
+                          SizedBox(
+                            height: 20.v,
+                          ),
+                          Row(
+                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                width: 24.h,
+                              ),
+                              Container(
+                                width: Get.width * 0.42,
+                                decoration: AppDecoration.fillGray.copyWith(
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(18.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "2",
+                                        style: theme.textTheme.titleLarge
+                                            ?.copyWith(fontSize: 26),
+                                      ),
+                                      Text(
+                                        "Absent Days",
+                                        style: theme.textTheme.titleSmall,
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Spacer(),
+                              Container(
+                                width: Get.width * 0.42,
+                                decoration: AppDecoration.fillGray.copyWith(
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(18.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "90 %",
+                                        style: theme.textTheme.titleLarge
+                                            ?.copyWith(fontSize: 26),
+                                      ),
+                                      Text(
+                                        "Persent",
+                                        style: theme.textTheme.titleSmall,
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 24.h,
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(24.0),
+                            child: Container(
+                              height: 50.v,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  border: Border.all(
+                                      color: theme.colorScheme.primary)),
+                              child: Padding(
+                                padding: const EdgeInsets.all(0),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      width: 20,
+                                      height: 50.v,
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(16),
+                                              bottomLeft: Radius.circular(16)),
+                                          color: theme.colorScheme.primary),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "Festival & Holidays",
+                                      style:
+                                          CustomTextStyles.titleMediumBlack900,
+                                    ),
+                                    Spacer(),
+                                    Container(
+                                      decoration: ShapeDecoration(
+                                          shape: CircleBorder(),
+                                          color: theme.colorScheme.primary),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          "01",
+                                          style: CustomTextStyles
+                                              .bodyMediumOnErrorContainer13,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 10.h,
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          )
                         ],
                       ),
-                    )
-                  ],
-                )),
-          )),
+                    ),
+                  )
+                ],
+              ))),
     );
   }
 }
+
+class MeetingDataSource {}
 
 onTapArrowleftone() {
   Get.back();

@@ -89,7 +89,7 @@ class CustomTextFormField extends StatelessWidget {
 
   Widget get textFormFieldWidget => Container(
         width: width ?? double.maxFinite,
-        height: height ?? 40.v,
+        height: height ?? 45.v,
         margin: margin,
         child: TextFormField(
           controller: controller,

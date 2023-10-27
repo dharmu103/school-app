@@ -109,7 +109,7 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                // Get.toNamed(AppRoutes.assignmentStatusScreen);
+                Get.toNamed(AppRoutes.studentUpdatesScreen);
               },
               child: Padding(
                 padding: EdgeInsets.only(
@@ -129,14 +129,19 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
                 endIndent: 6.h,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(
-                left: 23.h,
-                top: 12.v,
-              ),
-              child: Text(
-                "lbl_worksheets".tr,
-                style: CustomTextStyles.titleSmallOnPrimary,
+            GestureDetector(
+              onTap: () {
+                Get.toNamed(AppRoutes.studentWorksheetScreen);
+              },
+              child: Padding(
+                padding: EdgeInsets.only(
+                  left: 23.h,
+                  top: 12.v,
+                ),
+                child: Text(
+                  "lbl_worksheets".tr,
+                  style: CustomTextStyles.titleSmallOnPrimary,
+                ),
               ),
             ),
             Padding(
@@ -146,14 +151,17 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
                 endIndent: 6.h,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(
-                left: 23.h,
-                top: 13.v,
-              ),
-              child: Text(
-                "lbl_test_reports".tr,
-                style: CustomTextStyles.titleSmallOnPrimary,
+            GestureDetector(
+              onTap: () => Get.toNamed(AppRoutes.studentTestReportScreen),
+              child: Padding(
+                padding: EdgeInsets.only(
+                  left: 23.h,
+                  top: 13.v,
+                ),
+                child: Text(
+                  "lbl_test_reports".tr,
+                  style: CustomTextStyles.titleSmallOnPrimary,
+                ),
               ),
             ),
             Padding(
@@ -163,14 +171,17 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
                 endIndent: 6.h,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(
-                left: 23.h,
-                top: 11.v,
-              ),
-              child: Text(
-                "Raise an issue".tr,
-                style: CustomTextStyles.titleSmallOnPrimary,
+            GestureDetector(
+              onTap: () => Get.toNamed(AppRoutes.studentIssueScreen),
+              child: Padding(
+                padding: EdgeInsets.only(
+                  left: 23.h,
+                  top: 11.v,
+                ),
+                child: Text(
+                  "Raise an issue".tr,
+                  style: CustomTextStyles.titleSmallOnPrimary,
+                ),
               ),
             ),
             Padding(
@@ -231,7 +242,7 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                "lbl_okulsys".tr,
+                "Okulsys Copyright © 2023".tr,
                 style: CustomTextStyles.titleSmallOnPrimary,
               ),
             ),

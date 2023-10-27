@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:school_app/modules/student/student_worksheet_screen/controller/student_worksheet_controller.dart';
 
 import '../../../core/app_export.dart';
 import '../../../theme/app_decoration.dart';
@@ -6,27 +8,17 @@ import '../../../widgets/custom_app_bar_widget.dart';
 import '../../../widgets/custom_icon_button.dart';
 import '../../../widgets/custom_image_view.dart';
 
-class StudentWorksheetScreen extends StatelessWidget {
+class StudentWorksheetScreen extends GetView<StudentWorkSheetController> {
   const StudentWorksheetScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<String> list = ["Sci", 'SST', 'Math', 'Com', 'Hin', 'Eng'];
     return SafeArea(
       child: Scaffold(
         extendBody: true,
         extendBodyBehindAppBar: true,
         appBar: CustomAppBar(
           title: "Worksheet",
-          actions: [
-            CustomImageView(
-              svgPath: ImageConstant.imgMenuburger,
-              margin: EdgeInsets.only(right: 24.h),
-              onTap: () {
-                //   _key.currentState?.openEndDrawer();
-              },
-            )
-          ],
         ),
         //   key: _key, // Assign the key to Scaffold.
 
@@ -90,7 +82,7 @@ class StudentWorksheetScreen extends StatelessWidget {
                     borderRadius: BorderRadiusStyle.roundedBorderUp25,
                   ),
                   child: SingleChildScrollView(
-                    physics: ScrollPhysics(),
+                    // physics: ScrollPhysics(),
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 24.0),
                       child: Column(
@@ -101,163 +93,101 @@ class StudentWorksheetScreen extends StatelessWidget {
                           ),
                           Container(
                             height: 50,
-                            width: Get.width, alignment: Alignment.center,
-                            // child: ListView.builder(
-                            //   shrinkWrap: true,
-                            //   scrollDirection: Axis.horizontal,
-                            //   physics: ScrollPhysics(),
-                            //   itemBuilder: (context, index) {
-                            // return CircleAvatar(
-                            //   radius: 25.h,
-                            //   child: Padding(
-                            //     padding: const EdgeInsets.all(8.0),
-                            //     child: Text("data"),
-                            //   ),
-                            // );
-                            //   },
-                            //   itemCount: 6,
-                            // ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: list
-                                  .map(
-                                    (e) => CircleAvatar(
-                                      backgroundColor:
-                                          theme.colorScheme.primary,
-                                      radius: 26.h,
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(2.0),
-                                        child: CircleAvatar(
-                                          backgroundColor:
-                                              theme.scaffoldBackgroundColor,
-                                          radius: 24.h,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(0.0),
-                                            child: Text(
-                                              e,
-                                              style: CustomTextStyles
-                                                  .titleSmallPrimaryContainerMedium
-                                                  .copyWith(fontSize: 14.fSize),
+                            alignment: Alignment.center,
+                            child: ListView.builder(
+                              shrinkWrap: true,
+                              scrollDirection: Axis.horizontal,
+                              physics: ScrollPhysics(),
+                              itemBuilder: (context, index) {
+                                return CircleAvatar(
+                                  backgroundColor: theme.colorScheme.primary,
+                                  radius: 26.h,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(2.0),
+                                    child:
+                                        GetBuilder<StudentWorkSheetController>(
+                                      init: StudentWorkSheetController(),
+                                      initState: (_) {},
+                                      builder: (_) {
+                                        return GestureDetector(
+                                          onTap: () {
+                                            if (controller.currentSubject !=
+                                                index) {
+                                              controller
+                                                  .changeCurrentSubject(index);
+                                            }
+                                          },
+                                          child: CircleAvatar(
+                                            backgroundColor: controller
+                                                        .currentSubject ==
+                                                    index
+                                                ? theme.colorScheme.primary
+                                                : theme.scaffoldBackgroundColor,
+                                            radius: 24.h,
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.all(0.0),
+                                              child: Text(
+                                                controller.list[index],
+                                                style: controller
+                                                            .currentSubject ==
+                                                        index
+                                                    ? CustomTextStyles
+                                                        .titleSmallOnErrorContainer
+                                                    : CustomTextStyles
+                                                        .titleSmallPrimaryContainerMedium
+                                                        .copyWith(
+                                                            fontSize: 14.fSize),
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ),
+                                        );
+                                      },
                                     ),
-                                  )
-                                  .toList(),
+                                  ),
+                                );
+                              },
+                              itemCount: controller.list.length,
                             ),
+                            // child: Row(
+                            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            //   children: list
+                            //       .map(
+                            //     (e) => CircleAvatar(
+                            //       backgroundColor:
+                            //           theme.colorScheme.primary,
+                            //       radius: 26.h,
+                            //       child: Padding(
+                            //         padding: const EdgeInsets.all(2.0),
+                            //         child: CircleAvatar(
+                            //           backgroundColor:
+                            //               theme.scaffoldBackgroundColor,
+                            //           radius: 24.h,
+                            //           child: Padding(
+                            //             padding: const EdgeInsets.all(0.0),
+                            //             child: Text(
+                            //               e,
+                            //               style: CustomTextStyles
+                            //                   .titleSmallPrimaryContainerMedium
+                            //                   .copyWith(fontSize: 14.fSize),
+                            //             ),
+                            //           ),
+                            //         ),
+                            //       ),
+                            //     ),
+                            //   )
+                            //       .toList(),
+                            // ),
                           ),
                           SizedBox(
                             height: 30.v,
                           ),
-                          Container(
-                            decoration: AppDecoration.fillGray100.copyWith(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(12),
-                                    topRight: Radius.circular(12))),
-                            child: Padding(
-                                padding: EdgeInsets.only(
-                                    left: 11.h, top: 15.v, bottom: 15.v),
-                                child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      CustomIconButton(
-                                          height: 32.adaptSize,
-                                          width: 32.adaptSize,
-                                          padding: EdgeInsets.all(9.h),
-                                          decoration:
-                                              IconButtonStyleHelper.fillAmber,
-                                          child: CustomImageView(
-                                              svgPath:
-                                                  ImageConstant.imgFisrstats)),
-                                      Padding(
-                                          padding: EdgeInsets.only(
-                                              left: 15.h,
-                                              top: 3.v,
-                                              bottom: 5.v),
-                                          child: Text("lbl_science".tr,
-                                              style: CustomTextStyles
-                                                  .titleSmallPrimaryContainer))
-                                    ])),
+                          GetBuilder<StudentWorkSheetController>(
+                            initState: (_) {},
+                            builder: (_) {
+                              return WorksheetWidget();
+                            },
                           ),
-                          Divider(color: appTheme.indigo5004),
-                          ListView.builder(
-                            shrinkWrap: true,
-                            physics: ScrollPhysics(),
-                            padding: EdgeInsets.zero,
-                            itemBuilder: ((context, index) {
-                              return Container(
-                                decoration: index == 5
-                                    ? AppDecoration.fillGray100.copyWith(
-                                        borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(12),
-                                            bottomRight: Radius.circular(12)))
-                                    : AppDecoration.fillGray100,
-                                child: Padding(
-                                  padding: EdgeInsets.only(
-                                    top: 10.v,
-                                  ),
-                                  child: Column(
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                          left: 11.h,
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            Text("msg_create_a_analytical".tr,
-                                                style: CustomTextStyles
-                                                    .titleSmallBluegray800),
-                                            Spacer(),
-                                            CustomImageView(
-                                                svgPath: ImageConstant
-                                                    .imgCalendarBlueGray500,
-                                                height: 16.adaptSize,
-                                                width: 16.adaptSize,
-                                                margin: EdgeInsets.only(
-                                                    left: 29.h,
-                                                    top: 3.v,
-                                                    bottom: 3.v)),
-                                            Padding(
-                                                padding: EdgeInsets.only(
-                                                    left: 8.h, bottom: 3.v),
-                                                child: Text("lbl_12_08_2021".tr,
-                                                    style: theme
-                                                        .textTheme.bodySmall)),
-                                            SizedBox(
-                                              width: 10.h,
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                          left: 11.h,
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            Text(
-                                              "3 days",
-                                              style: CustomTextStyles
-                                                  .bodyMediumBluegray500,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 10.v,
-                                      ),
-                                      index == 5
-                                          ? SizedBox()
-                                          : Divider(color: appTheme.indigo5004),
-                                    ],
-                                  ),
-                                ),
-                              );
-                            }),
-                            itemCount: 6,
-                          )
                         ],
                       ),
                     ),
@@ -266,6 +196,147 @@ class StudentWorksheetScreen extends StatelessWidget {
               ],
             )),
       ),
+    );
+  }
+}
+
+class WorksheetWidget extends StatelessWidget {
+  const WorksheetWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GetBuilder<StudentWorkSheetController>(
+      init: StudentWorkSheetController(),
+      initState: (_) {},
+      builder: (_) {
+        return Column(
+          children: [
+            Container(
+              decoration: AppDecoration.fillGray100.copyWith(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(12),
+                      topRight: Radius.circular(12))),
+              child: Padding(
+                  padding: EdgeInsets.only(left: 11.h, top: 15.v, bottom: 15.v),
+                  child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomIconButton(
+                            height: 32.adaptSize,
+                            width: 32.adaptSize,
+                            padding: EdgeInsets.all(9.h),
+                            decoration: IconButtonStyleHelper.fillAmber,
+                            child: CustomImageView(
+                                svgPath: ImageConstant.imgFisrstats)),
+                        Padding(
+                            padding: EdgeInsets.only(
+                                left: 15.h, top: 3.v, bottom: 5.v),
+                            child: Text("lbl_science".tr,
+                                style: CustomTextStyles
+                                    .titleSmallPrimaryContainer))
+                      ])),
+            ),
+            Divider(color: appTheme.indigo5004),
+            ListView.builder(
+              shrinkWrap: true,
+              physics: ScrollPhysics(),
+              padding: EdgeInsets.zero,
+              itemBuilder: ((context, index) {
+                return Container(
+                  decoration: index == _.workSheets.workSheets?.length
+                      ? AppDecoration.fillGray100.copyWith(
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(12),
+                              bottomRight: Radius.circular(12)))
+                      : AppDecoration.fillGray100,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      top: 10.v,
+                    ),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 11.h,
+                          ),
+                          child: Row(
+                            children: [
+                              Text(
+                                  _.workSheets.workSheets![index].heading
+                                      .toString(),
+                                  style: _.workSheets.workSheets![index]
+                                              .isSubmitted ==
+                                          false
+                                      ? CustomTextStyles.titleSmallBluegray800
+                                      : CustomTextStyles.titleSmallBluegray200),
+                              Spacer(),
+                              _.workSheets.workSheets![index].isSubmitted ==
+                                      true
+                                  ? Container(
+                                      width: 25,
+                                      height: 22,
+                                      decoration: ShapeDecoration(
+                                          color: Colors.green,
+                                          shape: CircleBorder()),
+                                      child: Icon(
+                                        CupertinoIcons.check_mark,
+                                        size: 13,
+                                        color: Colors.white,
+                                      ))
+                                  : CustomImageView(
+                                      svgPath:
+                                          ImageConstant.imgCalendarBlueGray500,
+                                      height: 16.adaptSize,
+                                      width: 16.adaptSize,
+                                      margin: EdgeInsets.only(
+                                          left: 29.h, top: 3.v, bottom: 3.v)),
+                              _.workSheets.workSheets![index].isSubmitted ==
+                                      true
+                                  ? SizedBox()
+                                  : Padding(
+                                      padding: EdgeInsets.only(
+                                          left: 8.h, bottom: 3.v),
+                                      child: Text(
+                                          _.workSheets.workSheets![index].time
+                                              .toString(),
+                                          style: theme.textTheme.bodySmall)),
+                              SizedBox(
+                                width: 10.h,
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 11.h,
+                          ),
+                          child: Row(
+                            children: [
+                              Text(
+                                "3 days",
+                                style: CustomTextStyles.bodyMediumBluegray500,
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10.v,
+                        ),
+                        index == 5
+                            ? SizedBox()
+                            : Divider(color: appTheme.indigo5004),
+                      ],
+                    ),
+                  ),
+                );
+              }),
+              itemCount: _.workSheets.workSheets?.length ?? 0,
+            )
+          ],
+        );
+      },
     );
   }
 }

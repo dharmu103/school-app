@@ -25,45 +25,71 @@ class StudentContactScreen extends GetWidget<StudentContactController> {
                 width: double.maxFinite,
                 child: Column(children: [
                   SizedBox(height: 9.v),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                          padding: EdgeInsets.only(left: 24.h, bottom: 10),
+                          child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                    height: 32.adaptSize,
+                                    width: 32.adaptSize,
+                                    child: Stack(
+                                        alignment: Alignment.center,
+                                        children: [
+                                          CustomImageView(
+                                              svgPath: ImageConstant.imgClose,
+                                              height: 32.adaptSize,
+                                              width: 32.adaptSize,
+                                              alignment: Alignment.center,
+                                              onTap: () {
+                                                onTapImgCloseone();
+                                              }),
+                                          CustomImageView(
+                                              svgPath: ImageConstant.imgVolume,
+                                              height: 16.v,
+                                              width: 13.h,
+                                              alignment: Alignment.center)
+                                        ])),
+                                Padding(
+                                    padding: EdgeInsets.only(
+                                        left: 11.h, top: 4.v, bottom: 4.v),
+                                    child: Text("lbl_student_contact".tr,
+                                        style: CustomTextStyles
+                                            .titleSmallPrimaryContainerMedium))
+                              ]))),
+                  Container(
+                    width: Get.width,
+                    child: DataTable(
+                        headingRowHeight: 32.v,
+                        headingRowColor:
+                            MaterialStatePropertyAll(theme.colorScheme.primary),
+                        headingTextStyle: theme.textTheme.labelLarge
+                            ?.copyWith(color: Colors.white),
+                        columnSpacing: 0,
+                        decoration: BoxDecoration(),
+                        columns: [
+                          DataColumn(
+                            label: Container(
+                              width: 200.h,
+                              child: Text(
+                                "lbl_name".tr,
+                              ),
+                            ),
+                          ),
+                          DataColumn(
+                              label: Text(
+                            "lbl_number".tr,
+                          )),
+                          DataColumn(label: Text(""))
+                        ],
+                        rows: []),
+                  ),
                   Expanded(
                       child: SingleChildScrollView(
                           child: Column(children: [
-                    Align(
-                        alignment: Alignment.centerLeft,
-                        child: Padding(
-                            padding: EdgeInsets.only(left: 24.h),
-                            child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                      height: 32.adaptSize,
-                                      width: 32.adaptSize,
-                                      child: Stack(
-                                          alignment: Alignment.center,
-                                          children: [
-                                            CustomImageView(
-                                                svgPath: ImageConstant.imgClose,
-                                                height: 32.adaptSize,
-                                                width: 32.adaptSize,
-                                                alignment: Alignment.center,
-                                                onTap: () {
-                                                  onTapImgCloseone();
-                                                }),
-                                            CustomImageView(
-                                                svgPath:
-                                                    ImageConstant.imgVolume,
-                                                height: 16.v,
-                                                width: 13.h,
-                                                alignment: Alignment.center)
-                                          ])),
-                                  Padding(
-                                      padding: EdgeInsets.only(
-                                          left: 11.h, top: 4.v, bottom: 4.v),
-                                      child: Text("lbl_student_contact".tr,
-                                          style: CustomTextStyles
-                                              .titleSmallPrimaryContainerMedium))
-                                ]))),
-                    SizedBox(height: 9.v),
+                    // SizedBox(height: 9.v),
                     studentContactTable()
                   ])))
                 ]))));

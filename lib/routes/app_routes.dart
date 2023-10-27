@@ -1,3 +1,4 @@
+import 'package:school_app/modules/common/signup/signup_screen.dart';
 import 'package:school_app/modules/employee/assignment_status_screen/assignment_status_screen.dart';
 import 'package:school_app/modules/employee/employ_hp_screen/binding/employ_home_binding.dart';
 import 'package:school_app/modules/employee/employ_hp_screen/employ_home_screen.dart';
@@ -21,7 +22,12 @@ import 'package:school_app/modules/common/sign_in_as_screen/binding/sign_in_as_b
 import 'package:get/get.dart';
 import 'package:school_app/modules/student/student_issue_screen/student_issue_screen.dart';
 import 'package:school_app/modules/student/student_transaction/controller/student_transaction_controller.dart';
+import 'package:school_app/modules/student/student_worksheet_screen/bindings/student_worksheet_binding.dart';
 import 'package:school_app/modules/student/student_worksheet_screen/student_worksheet.dart';
+import 'package:school_app/modules/student/test_report/test_report_screen.dart';
+import 'package:school_app/modules/student/updates/updates_bindings.dart';
+import 'package:school_app/modules/student/updates/updates_page.dart';
+import 'package:school_app/modules/student/worksheet/worksheet_bindings.dart';
 import 'package:school_app/modules/vendor/passbook/passbook_screen.dart';
 import 'package:school_app/modules/vendor/payment_screen/binding/payment_binding.dart';
 import 'package:school_app/modules/vendor/payment_screen/payment_screen.dart';
@@ -32,6 +38,8 @@ import 'package:school_app/modules/vendor/vendor_hp_screen/vendor_hp_screen.dart
 
 import '../modules/employee/assignment_status_screen/binding/assignment_status_binding.dart';
 import '../modules/employee/upload_attendence/upload_attendence_screen.dart';
+import '../modules/employee/upload_result/binding/upload_result_binding.dart';
+import '../modules/employee/upload_result/upload_result_screen.dart';
 import '../modules/student/curricular/currucular/curricular_page.dart';
 import '../modules/student/home_screen/home_screen.dart';
 import '../modules/common/sign_in_as_screen/sign_in_as_screen.dart';
@@ -43,6 +51,7 @@ class AppRoutes {
   static const String signInWithKeyboardScreen =
       '/sign_in_with_keyboard_screen';
   static const String signInAsScreen = '/sign_in_as_screen';
+  static const String signupScreen = '/sign_up_screen';
 
 //   Student Routes
 
@@ -53,6 +62,7 @@ class AppRoutes {
   static const String studentIssueScreen = '/student_issue_screen';
   static const String studentTransactionScreen = '/student_transaction_screen';
   static const String studentTestReportScreen = '/student_test_report_screen';
+  static const String studentUpdatesScreen = '/student_updates_screen';
 
 //   Employee Routes
 
@@ -94,6 +104,13 @@ class AppRoutes {
         SignInAsBinding(),
       ],
     ),
+    GetPage(
+      name: signupScreen,
+      page: () => SignupScreen(),
+      bindings: [
+        // SignInAsBinding(),
+      ],
+    ),
 
     // student Routes
 
@@ -118,9 +135,17 @@ class AppRoutes {
         page: () => StudentIssueScreen(),
         bindings: []),
     GetPage(
+        name: studentTestReportScreen,
+        page: () => TestReportScreen(),
+        bindings: []),
+    GetPage(
         name: studentWorksheetScreen,
         page: () => StudentWorksheetScreen(),
-        bindings: []),
+        bindings: [StudentWorkSheetBinding()]),
+    GetPage(
+        name: studentUpdatesScreen,
+        page: () => UpdatesScreen(),
+        bindings: [UpdatesBindings()]),
 
     // Employee Screen
 
@@ -138,10 +163,10 @@ class AppRoutes {
         page: () => StudentContactScreen(),
         bindings: [StudentContactBinding()]),
 
-    // GetPage(
-    //     name: uploadResultScreen,
-    //     page: () => Uplo,
-    //     bindings: [UploadCircularBinding()]),
+    GetPage(
+        name: uploadResultScreen,
+        page: () => UploadResultScreen(),
+        bindings: [UploadResultBindings()]),
     GetPage(
         name: uploadCurricularScreen,
         page: () => UploadCircularScreen(),

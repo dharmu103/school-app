@@ -76,17 +76,35 @@ class SignInWithKeyboardScreen extends GetWidget<SignInWithKeyboardController> {
                           CustomElevatedButton(
                             text: "lbl_log_in".tr,
                             onTap: () async {
-                              if (kDebugMode) {
-                                controller.signinDebugMode();
-                              } else if (kReleaseMode) {
-                                String res = await controller.signInWithEmail();
-                                if (res == "success") {
-                                  controller.signin();
-                                }
-                              }
+                              //   if (kDebugMode) {
+                              controller.signinDebugMode();
+                              //   } else if (kReleaseMode) {
+                              //   String res = await controller.signInWithEmail();
+                              //   if (res == "success") {
+                              //     controller.signin();
+                              //     //     }
+                              //   }
                             },
                           ),
-                          SizedBox(height: 5.v)
+                          SizedBox(height: 5.v),
+                          PrefUtils.sharedPreferences?.getString("login_as") ==
+                                  'lbl_student'.tr
+                              ? Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text("Don't have an account? "),
+                                    TextButton(
+                                        onPressed: () {
+                                          Get.toNamed(AppRoutes.signupScreen);
+                                        },
+                                        child: Text(
+                                          "Signup",
+                                          style: CustomTextStyles
+                                              .bodyMediumPrimary,
+                                        ))
+                                  ],
+                                )
+                              : SizedBox(),
                         ])))));
   }
 

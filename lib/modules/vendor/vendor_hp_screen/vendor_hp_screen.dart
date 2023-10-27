@@ -98,28 +98,30 @@ class VendorHpScreen extends GetWidget<VendorHpController> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         SizedBox(
-                          height: 80.v,
+                          height: 40.v,
                         ),
-                        Container(
-                          //   decoration: AppDecoration.outlineBlack,
-                          width: Get.width * 0.7,
-                          height: Get.width * 0.7,
-                          //   child: GetBuilder<VendorHpController>(builder: (_) {
-                          //     return QRView(
-                          //       overlay: QrScannerOverlayShape(
-                          //         borderColor: controller.borderColor,
-                          //         borderRadius: 10,
-                          //         borderLength: 30,
-                          //         borderWidth: 10,
-                          //       ),
-                          //       key: qrKey,
-                          //       onQRViewCreated: (QRViewController q) =>
-                          //           controller.scanQr(q),
-                          //     );
-                          //   }),
+                        Expanded(
+                          child: Container(
+                            //   decoration: AppDecoration.outlineBlack,
+                            width: Get.width - 48.h,
+                            height: Get.height * 0.6,
+                            child: GetBuilder<VendorHpController>(builder: (_) {
+                              return QRView(
+                                overlay: QrScannerOverlayShape(
+                                  borderColor: controller.borderColor,
+                                  borderRadius: 10,
+                                  borderLength: 30,
+                                  borderWidth: 10,
+                                ),
+                                key: qrKey,
+                                onQRViewCreated: (QRViewController q) =>
+                                    controller.scanQr(q),
+                              );
+                            }),
+                          ),
                         ),
                         SizedBox(
-                          height: 80.v,
+                          height: 40.v,
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 18.h, right: 18.h),
@@ -128,7 +130,10 @@ class VendorHpScreen extends GetWidget<VendorHpController> {
                               child: CustomElevatedButton(
                                 text: "Scanning..",
                               )),
-                        )
+                        ),
+                        SizedBox(
+                          height: 40.v,
+                        ),
                       ],
                     ),
                   ),

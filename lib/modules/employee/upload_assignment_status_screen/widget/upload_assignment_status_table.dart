@@ -5,7 +5,7 @@ import '../../../../widgets/custom_image_view.dart';
 
 Widget uploadAssignmentStatusTable() {
   return DataTable(
-    headingRowHeight: 32.v,
+    headingRowHeight: 0.v,
     headingRowColor: MaterialStatePropertyAll(theme.colorScheme.primary),
     headingTextStyle: theme.textTheme.labelLarge?.copyWith(color: Colors.white),
     columnSpacing: 10,
@@ -13,16 +13,16 @@ Widget uploadAssignmentStatusTable() {
     columns: [
       DataColumn(
         label: Text(
-          "lbl_name".tr,
+          "".tr,
         ),
       ),
       DataColumn(
           label: Text(
-        "Submitted".tr,
+        "".tr,
       )),
       DataColumn(
           label: Text(
-        "Not Submitted".tr,
+        "".tr,
       )),
     ],
     rows: List.generate(

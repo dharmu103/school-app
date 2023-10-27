@@ -138,6 +138,35 @@ class EmployDraweritem extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(
                 left: 18.h,
+                top: 27.v,
+              ),
+              child: GestureDetector(
+                onTap: () {
+                  Get.toNamed(AppRoutes.uploadResultScreen);
+                },
+                child: Row(
+                  children: [
+                    CustomImageView(
+                      svgPath: ImageConstant.imgCheckmark,
+                      height: 20.v,
+                      width: 16.h,
+                      margin: EdgeInsets.only(bottom: 3.v),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 17.h),
+                      child: Text(
+                        "Upload Result".tr,
+                        style: CustomTextStyles.titleSmallOnPrimary,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                left: 18.h,
                 top: 28.v,
               ),
               child: GestureDetector(

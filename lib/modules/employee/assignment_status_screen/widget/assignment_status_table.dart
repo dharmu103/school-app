@@ -5,7 +5,7 @@ import '../../../../widgets/custom_image_view.dart';
 
 Widget assignmentStatusTable() {
   return DataTable(
-    headingRowHeight: 32.v,
+    headingRowHeight: 0.v,
     headingRowColor: MaterialStatePropertyAll(theme.colorScheme.primary),
     headingTextStyle: theme.textTheme.labelLarge?.copyWith(color: Colors.white),
     columnSpacing: 0,

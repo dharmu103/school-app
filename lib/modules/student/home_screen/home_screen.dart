@@ -1,4 +1,3 @@
-import 'package:defer_pointer/defer_pointer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:school_app/core/app_export.dart';
@@ -6,6 +5,8 @@ import 'package:school_app/modules/student/home_screen/controller/home_controlle
 import 'package:school_app/modules/student/home_screen/widgets/updates_widget.dart';
 import 'package:school_app/modules/student/home_screen/widgets/work_sheet_widget.dart';
 import 'package:school_app/modules/student/home_screen_five_draweritem/home_screen_five_draweritem.dart';
+import 'package:school_app/widgets/base_button.dart';
+import 'package:school_app/widgets/custom_elevated_button.dart';
 
 import '../../../widgets/custom_image_view.dart';
 
@@ -127,9 +128,7 @@ class HomeScreen extends GetWidget<HomeScreenController> {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(
-                              left: 24.h,
-                              top: 18.v,
-                            ),
+                                left: 24.h, top: 18.v, right: 12.h),
                             child: Row(
                               children: [
                                 Text(
@@ -139,6 +138,16 @@ class HomeScreen extends GetWidget<HomeScreenController> {
                                     height: 24 / 20,
                                   ),
                                 ),
+                                Spacer(),
+                                Align(
+                                    alignment: Alignment.centerRight,
+                                    child: TextButton(
+                                      child: Text("see all"),
+                                      onPressed: () {
+                                        Get.toNamed(
+                                            AppRoutes.studentWorksheetScreen);
+                                      },
+                                    )),
                               ],
                             ),
                           ),
@@ -153,9 +162,18 @@ class HomeScreen extends GetWidget<HomeScreenController> {
                                 return Container();
                               },
                               itemCount: 2),
+                          //   Align(
+                          //       alignment: Alignment.centerRight,
+                          //       child: TextButton(
+                          //         child: Text("see all"),
+                          //         onPressed: () {},
+                          //       )),
                           Padding(
                             padding: EdgeInsets.only(
-                                left: 24.h, top: 18.v, bottom: 5.v),
+                                left: 24.h,
+                                top: 18.v,
+                                bottom: 5.v,
+                                right: 10.h),
                             child: Row(
                               children: [
                                 Text(
@@ -165,6 +183,16 @@ class HomeScreen extends GetWidget<HomeScreenController> {
                                     height: 24 / 20,
                                   ),
                                 ),
+                                Spacer(),
+                                Align(
+                                    alignment: Alignment.centerRight,
+                                    child: TextButton(
+                                      child: Text("see all"),
+                                      onPressed: () {
+                                        Get.toNamed(
+                                            AppRoutes.studentUpdatesScreen);
+                                      },
+                                    )),
                               ],
                             ),
                           ),

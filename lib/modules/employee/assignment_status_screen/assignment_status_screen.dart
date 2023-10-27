@@ -17,8 +17,8 @@ class AssignmentStatusScreen extends GetWidget<AssignmentStatusController> {
     mediaQueryData = MediaQuery.of(context);
     final GlobalKey<ScaffoldState> _keyEmp = GlobalKey();
     return SafeArea(
-      key: _keyEmp,
       child: Scaffold(
+        key: _keyEmp,
         appBar: EmployeeAppBar(
           title: "lbl_school_name".tr,
         ),
@@ -27,32 +27,58 @@ class AssignmentStatusScreen extends GetWidget<AssignmentStatusController> {
             width: double.maxFinite,
             child: Column(children: [
               SizedBox(height: 9.v),
+              Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                      padding: EdgeInsets.only(left: 24.h),
+                      child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.only(
+                                  left: 11.h,
+                                ),
+                                child: Text(" Assignment status",
+                                    style: CustomTextStyles
+                                        .titleMediumPrimaryContainer))
+                          ]))),
+              SizedBox(height: 9.v),
+              SizedBox(
+                width: Get.width,
+                child: DataTable(
+                    headingRowHeight: 32.v,
+                    headingRowColor:
+                        MaterialStatePropertyAll(theme.colorScheme.primary),
+                    headingTextStyle: theme.textTheme.labelLarge
+                        ?.copyWith(color: Colors.white),
+                    columnSpacing: 10,
+                    decoration: BoxDecoration(),
+                    columns: [
+                      DataColumn(
+                        label: Container(
+                          width: 160.h,
+                          child: Text(
+                            "lbl_name".tr,
+                          ),
+                        ),
+                      ),
+                      DataColumn(
+                          label: Text(
+                        "Status".tr,
+                      )),
+                    ],
+                    rows: []),
+              ),
               Expanded(
                   child: SingleChildScrollView(
                       child: Column(children: [
-                Align(
-                    alignment: Alignment.centerLeft,
-                    child: Padding(
-                        padding: EdgeInsets.only(left: 24.h),
-                        child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                  padding: EdgeInsets.only(
-                                    left: 11.h,
-                                  ),
-                                  child: Text(" Assignment status",
-                                      style: CustomTextStyles
-                                          .titleMediumPrimaryContainer))
-                            ]))),
-                SizedBox(height: 9.v),
                 SizedBox(width: Get.width, child: assignmentStatusTable()),
                 SizedBox(
                   height: 200,
                 )
               ])))
             ])),
-        floatingActionButton: Padding(
+        bottomNavigationBar: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
           child: CustomElevatedButton(text: "Upload"),
         ),

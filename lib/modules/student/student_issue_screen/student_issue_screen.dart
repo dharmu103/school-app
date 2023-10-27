@@ -1,10 +1,14 @@
+import 'dart:io';
+
 import 'package:dotted_border/dotted_border.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:school_app/core/app_export.dart';
 import 'package:school_app/theme/theme_helper.dart';
 import 'package:school_app/widgets/custom_elevated_button.dart';
 import 'package:school_app/widgets/custom_text_form_field.dart';
+import 'package:school_app/widgets/dialogs/update_success.dart';
 
 import '../../../widgets/custom_app_bar_widget.dart';
 import '../../../widgets/custom_image_view.dart';
@@ -21,21 +25,10 @@ class StudentIssueScreen extends StatelessWidget {
         extendBodyBehindAppBar: true,
         appBar: CustomAppBar(
           title: "Raise an Issue",
-          actions: [
-            CustomImageView(
-              svgPath: ImageConstant.imgMenuburger,
-              margin: EdgeInsets.only(right: 24.h),
-              onTap: () {
-                //   _key.currentState?.openEndDrawer();
-              },
-            )
-          ],
+          actions: [],
         ),
         //   key: _key, // Assign the key to Scaffold.
 
-        endDrawer: Drawer(
-          child: HomeScreenFiveDraweritem(),
-        ),
         body: Container(
             width: Get.width,
             // height: Get.height,
@@ -107,40 +100,52 @@ class StudentIssueScreen extends StatelessWidget {
                           //             .titleSmallPrimaryContainer)),
                           Padding(
                               padding: EdgeInsets.only(top: 37.v, right: 1.h),
-                              child: DottedBorder(
-                                  color: appTheme.indigo5001,
-                                  padding: EdgeInsets.only(
-                                      left: 1.h,
-                                      top: 1.v,
-                                      right: 1.h,
-                                      bottom: 1.v),
-                                  strokeWidth: 1.h,
-                                  radius: Radius.circular(20),
-                                  borderType: BorderType.RRect,
-                                  dashPattern: [5, 5],
-                                  child: Container(
-                                      width: Get.width,
-                                      padding:
-                                          EdgeInsets.symmetric(vertical: 68.v),
-                                      decoration: AppDecoration.outlineIndigo
-                                          .copyWith(
-                                              borderRadius: BorderRadiusStyle
-                                                  .circleBorder20),
-                                      child: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            CustomImageView(
-                                                svgPath: ImageConstant
-                                                    .imgFirrsignout,
-                                                height: 32.adaptSize,
-                                                width: 32.adaptSize),
-                                            SizedBox(height: 18.v),
-                                            Text("msg_click_to_upload".tr,
-                                                style: CustomTextStyles
-                                                    .bodyMediumBluegray500)
-                                          ])))),
+                              child: GestureDetector(
+                                onTap: () async {
+                                  FilePickerResult? result =
+                                      await FilePicker.platform.pickFiles();
+
+                                  if (result != null) {
+                                    // File file = File(result.files.single.path!);
+                                  } else {
+                                    // User canceled the picker
+                                  }
+                                },
+                                child: DottedBorder(
+                                    color: appTheme.indigo5001,
+                                    padding: EdgeInsets.only(
+                                        left: 1.h,
+                                        top: 1.v,
+                                        right: 1.h,
+                                        bottom: 1.v),
+                                    strokeWidth: 1.h,
+                                    radius: Radius.circular(20),
+                                    borderType: BorderType.RRect,
+                                    dashPattern: [5, 5],
+                                    child: Container(
+                                        width: Get.width,
+                                        padding: EdgeInsets.symmetric(
+                                            vertical: 68.v),
+                                        decoration: AppDecoration.outlineIndigo
+                                            .copyWith(
+                                                borderRadius: BorderRadiusStyle
+                                                    .circleBorder20),
+                                        child: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              CustomImageView(
+                                                  svgPath: ImageConstant
+                                                      .imgFirrsignout,
+                                                  height: 32.adaptSize,
+                                                  width: 32.adaptSize),
+                                              SizedBox(height: 18.v),
+                                              Text("msg_click_to_upload".tr,
+                                                  style: CustomTextStyles
+                                                      .bodyMediumBluegray500)
+                                            ]))),
+                              )),
                           SizedBox(
                             height: 10,
                           ),
@@ -169,6 +174,7 @@ class StudentIssueScreen extends StatelessWidget {
               ],
             )),
         bottomNavigationBar: CustomElevatedButton(
+          onTap: () => {Get.dialog(UpdateDailogWidget())},
           text: "Submit",
           margin: EdgeInsets.all(24),
         ),

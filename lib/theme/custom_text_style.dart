@@ -207,6 +207,11 @@ class CustomTextStyles {
         fontSize: 14.fSize,
         fontWeight: FontWeight.w500,
       );
+  static get titleMediumBluegray900 => theme.textTheme.titleSmall!.copyWith(
+        color: appTheme.blueGray900,
+        fontSize: 16.fSize,
+        fontWeight: FontWeight.w400,
+      );
   static get titleSmallBluegray90001 => theme.textTheme.titleSmall!.copyWith(
         color: appTheme.blueGray90001,
       );
@@ -255,6 +260,11 @@ class CustomTextStyles {
   static get titleSmallRedA700 => theme.textTheme.titleSmall!.copyWith(
         color: appTheme.redA700,
         fontWeight: FontWeight.w500,
+      );
+  static get titleMediumRedA700 => theme.textTheme.titleSmall!.copyWith(
+        fontSize: 16.fSize,
+        color: appTheme.redA700,
+        fontWeight: FontWeight.w400,
       );
 }
 

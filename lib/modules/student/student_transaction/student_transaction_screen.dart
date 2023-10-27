@@ -24,9 +24,6 @@ class StudentTransactionScreen extends GetWidget<StudentTransactionController> {
       appBar: CustomAppBar(
         title: "Transactions",
       ),
-      endDrawer: Drawer(
-        child: HomeScreenFiveDraweritem(),
-      ),
       body: Container(
           width: Get.width,
           // height: Get.height,
@@ -164,12 +161,16 @@ class StudentTransactionScreen extends GetWidget<StudentTransactionController> {
           )),
       bottomNavigationBar: Container(
         color: Colors.white,
-        child: TextButton(
-          onPressed: () {},
-          child: Text(
-            "Raise an issue",
-            style:
-                theme.textTheme.labelMedium?.copyWith(color: appTheme.red600),
+        height: 30,
+        child: GestureDetector(
+          onTap: () {
+            Get.toNamed(AppRoutes.studentIssueScreen);
+          },
+          child: Center(
+            child: Text(
+              "Raise an issue",
+              style: CustomTextStyles.titleSmallRedA700,
+            ),
           ),
         ),
       ),

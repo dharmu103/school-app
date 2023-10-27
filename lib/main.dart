@@ -2,8 +2,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:school_app/modules/common/signup/signup_screen.dart';
+import 'package:school_app/modules/student/test_report/test_report_screen.dart';
+import 'package:school_app/modules/student/updates/updates_page.dart';
 import 'firebase_options.dart';
 import 'core/app_export.dart';
+import 'modules/student/worksheet/worksheet_page.dart';
 import 'modules/vendor/transaction_screen/transaction_screen.dart';
 
 void main() async {
@@ -31,9 +35,9 @@ class MyApp extends StatelessWidget {
       fallbackLocale: Locale('en', 'US'),
       title: 'school_app',
       initialBinding: InitialBindings(),
-      initialRoute: AppRoutes.studentWorksheetScreen,
+      initialRoute: AppRoutes.coverScreen,
       getPages: AppRoutes.pages,
-      //   home: TransactionScreen(),
+      //   home: TestReportScreen(),
     );
   }
 }

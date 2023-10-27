@@ -76,12 +76,30 @@ class WorkSheetWidget extends StatelessWidget {
             ],
           ),
           SizedBox(height: 9.v),
-          CustomElevatedButton(
-            height: 35.v,
-            text: "lbl_to_be_submitted".tr,
-            decoration: CustomButtonStyles.gradientPrimaryToTealDecoration,
-            buttonTextStyle: CustomTextStyles.titleSmallOnErrorContainer,
-          ),
+          //   CustomElevatedButton(
+          //     height: 35.v,
+          //     text: "lbl_to_be_submitted".tr,
+          //     decoration: CustomButtonStyles.gradientPrimaryToTealDecoration,
+          //     buttonTextStyle: CustomTextStyles.titleSmallOnErrorContainer,
+          //   ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 35.v,
+                child: Center(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.h),
+                    child: Text(
+                      "lbl_to_be_submitted".tr,
+                      style: CustomTextStyles.labelLargeOnErrorContainer_1,
+                    ),
+                  ),
+                ),
+                decoration: CustomButtonStyles.gradientPrimaryToTealDecoration,
+              ),
+            ],
+          )
         ],
       ),
     );

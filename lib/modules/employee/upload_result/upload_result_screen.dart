@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'controller/upload_result_controller.dart';
 import 'widget/upload_result_table.dart';
 
-class UploadResultScreen extends GetWidget<UploadResultController> {
+class UploadResultScreen extends GetView<UploadResultController> {
   const UploadResultScreen({Key? key}) : super(key: key);
 
   @override
@@ -61,8 +61,40 @@ class UploadResultScreen extends GetWidget<UploadResultController> {
                       ),
                     ),
                     DataColumn(
-                        label: Text(
-                      "Out of 100".tr,
+                        label: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Out of".tr,
+                        ),
+                        Container(
+                            width: 35.h,
+                            height: 32.v,
+                            // padding: EdgeInsets.only(left: 5),
+                            child: Center(
+                              child: TextFormField(
+                                onChanged: (v) {
+                                  controller.totalMarks.value = v;
+                                },
+                                textAlign: TextAlign.center,
+                                decoration: InputDecoration(
+                                    // filled: true,
+                                    fillColor: theme.colorScheme.primary,
+                                    isDense: true,
+                                    hintText: controller.totalMarks.value,
+                                    contentPadding: EdgeInsets.zero,
+                                    hintStyle: theme.textTheme.labelLarge
+                                        ?.copyWith(
+                                            color: Colors.white,
+                                            decoration:
+                                                TextDecoration.underline),
+                                    border: UnderlineInputBorder(
+                                        // gapPadding: 0,
+                                        borderSide: BorderSide(
+                                            color: Colors.white, width: 5))),
+                              ),
+                            ))
+                      ],
                     )),
                     DataColumn(
                         label: Text(
@@ -76,20 +108,20 @@ class UploadResultScreen extends GetWidget<UploadResultController> {
                   child: SingleChildScrollView(
                       child: Column(children: [
                 // SizedBox(height: 9.v),
-                SizedBox(width: Get.width, child: uploadResultTable()),
+                SizedBox(width: Get.width, child: UploadResultTable()),
                 SizedBox(
                   height: 200,
                 )
               ])))
             ])),
-        floatingActionButton: Padding(
+        bottomNavigationBar: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
           child: CustomElevatedButton(
             text: "Upload",
             onTap: () => Get.toNamed(AppRoutes.employeeScreen),
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         // persistentFooterButtons: [
         //   CustomElevatedButton(text: "Upload"),
         // ],

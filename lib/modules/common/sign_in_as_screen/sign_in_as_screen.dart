@@ -88,14 +88,14 @@ class SignInAsScreen extends GetWidget<SignInAsController> {
                       ),
                     ),
                     SizedBox(height: 67.v),
-                    CustomElevatedButton(
-                      text: "lbl_continue".tr,
-                      buttonStyle: CustomButtonStyles.fillBlack,
-                      onTap: () {
-                        Get.toNamed(AppRoutes.signInWithKeyboardScreen);
-                      },
-                    ),
-                    Spacer()
+                    // CustomElevatedButton(
+                    //   text: "lbl_continue".tr,
+                    //   buttonStyle: CustomButtonStyles.fillBlack,
+                    //   onTap: () {
+                    //     Get.toNamed(AppRoutes.signInWithKeyboardScreen);
+                    //   },
+                    // ),
+                    Spacer(), Text("Okulsys")
                   ],
                 );
               },
