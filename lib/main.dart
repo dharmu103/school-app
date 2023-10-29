@@ -1,3 +1,4 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,8 +11,11 @@ import 'core/app_export.dart';
 import 'modules/student/worksheet/worksheet_page.dart';
 import 'modules/vendor/transaction_screen/transaction_screen.dart';
 
+var firestCamera;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  final cameras = await availableCameras();
+  firestCamera = cameras.first;
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]).then((value) async {

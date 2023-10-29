@@ -106,6 +106,12 @@ class PaymentScreen extends GetWidget<PaymentController> {
                           "Muskan Sharma".tr,
                           style: CustomTextStyles.titleSmallOnPrimary,
                         ),
+                        SizedBox(height: 10.v),
+                        Text(
+                          "Available Balance: 500",
+                          style: CustomTextStyles.bodyMediumPrimary
+                              .copyWith(color: theme.colorScheme.primary),
+                        ),
                         SizedBox(height: 45.v),
                         Text(
                           "Enter amount to pay".tr,
@@ -127,29 +133,37 @@ class PaymentScreen extends GetWidget<PaymentController> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              "100+".tr,
-                              style: CustomTextStyles.labelLargeBlack900,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 28.h),
-                              child: Text(
-                                "200+".tr,
+                            Chip(
+                              label: Text(
+                                "100+".tr,
                                 style: CustomTextStyles.labelLargeBlack900,
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 28.h),
-                              child: Text(
-                                "300+".tr,
-                                style: CustomTextStyles.labelLargeBlack900,
+                              padding: EdgeInsets.only(left: 18.h),
+                              child: Chip(
+                                label: Text(
+                                  "200+".tr,
+                                  style: CustomTextStyles.labelLargeBlack900,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 18.h),
+                              child: Chip(
+                                label: Text(
+                                  "300+".tr,
+                                  style: CustomTextStyles.labelLargeBlack900,
+                                ),
                               ),
                             ),
                             Padding(
                               padding: EdgeInsets.only(left: 27.h),
-                              child: Text(
-                                "500+".tr,
-                                style: CustomTextStyles.labelLargeBlack900,
+                              child: Chip(
+                                label: Text(
+                                  "500+".tr,
+                                  style: CustomTextStyles.labelLargeBlack900,
+                                ),
                               ),
                             ),
                           ],

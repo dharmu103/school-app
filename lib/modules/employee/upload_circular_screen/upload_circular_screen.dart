@@ -1,4 +1,6 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:school_app/widgets/custom_app_bar_widget.dart';
+import 'package:school_app/widgets/dialogs/update_success.dart';
 
 import '../../../widgets/custom_image_view.dart';
 import '../../../widgets/employee_app_bar.dart';
@@ -60,40 +62,46 @@ class UploadCircularScreen extends GetWidget<UploadCircularController> {
                         ]),
                         Padding(
                             padding: EdgeInsets.only(top: 37.v, right: 1.h),
-                            child: DottedBorder(
-                                color: appTheme.indigo5001,
-                                padding: EdgeInsets.only(
-                                    left: 1.h,
-                                    top: 1.v,
-                                    right: 1.h,
-                                    bottom: 1.v),
-                                strokeWidth: 1.h,
-                                radius: Radius.circular(20),
-                                borderType: BorderType.RRect,
-                                dashPattern: [5, 5],
-                                child: Container(
-                                    width: Get.width,
-                                    padding:
-                                        EdgeInsets.symmetric(vertical: 68.v),
-                                    decoration: AppDecoration.outlineIndigo
-                                        .copyWith(
-                                            borderRadius: BorderRadiusStyle
-                                                .circleBorder20),
-                                    child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          CustomImageView(
-                                              svgPath:
-                                                  ImageConstant.imgFirrsignout,
-                                              height: 32.adaptSize,
-                                              width: 32.adaptSize),
-                                          SizedBox(height: 18.v),
-                                          Text("msg_click_to_upload".tr,
-                                              style: CustomTextStyles
-                                                  .bodyMediumBluegray500)
-                                        ])))),
+                            child: GestureDetector(
+                              onTap: () async {
+                                FilePickerResult? result =
+                                    await FilePicker.platform.pickFiles();
+                              },
+                              child: DottedBorder(
+                                  color: appTheme.indigo5001,
+                                  padding: EdgeInsets.only(
+                                      left: 1.h,
+                                      top: 1.v,
+                                      right: 1.h,
+                                      bottom: 1.v),
+                                  strokeWidth: 1.h,
+                                  radius: Radius.circular(20),
+                                  borderType: BorderType.RRect,
+                                  dashPattern: [5, 5],
+                                  child: Container(
+                                      width: Get.width,
+                                      padding:
+                                          EdgeInsets.symmetric(vertical: 68.v),
+                                      decoration: AppDecoration.outlineIndigo
+                                          .copyWith(
+                                              borderRadius: BorderRadiusStyle
+                                                  .circleBorder20),
+                                      child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            CustomImageView(
+                                                svgPath: ImageConstant
+                                                    .imgFirrsignout,
+                                                height: 32.adaptSize,
+                                                width: 32.adaptSize),
+                                            SizedBox(height: 18.v),
+                                            Text("msg_click_to_upload".tr,
+                                                style: CustomTextStyles
+                                                    .bodyMediumBluegray500)
+                                          ]))),
+                            )),
                         SizedBox(height: 18.v),
                         Align(
                             alignment: Alignment.center,
@@ -103,6 +111,9 @@ class UploadCircularScreen extends GetWidget<UploadCircularController> {
                       ]))
             ])),
         bottomNavigationBar: CustomElevatedButton(
+            onTap: () {
+              Get.dialog(UpdateDailogWidget());
+            },
             text: "lbl_upload".tr,
             margin: EdgeInsets.only(left: 25.h, right: 25.h, bottom: 42.v)));
   }

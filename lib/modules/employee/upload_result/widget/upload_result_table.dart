@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:school_app/fake_data.dart';
 import 'package:school_app/modules/employee/upload_result/controller/upload_result_controller.dart';
 
 import '../../../../core/app_export.dart';
@@ -46,7 +47,7 @@ class UploadResultTable extends GetWidget<UploadResultController> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text(
-                                "lbl_muskan_verma".tr,
+                                fakedata[index]["student_name"],
                                 style: CustomTextStyles.bodyMedium_1,
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -66,7 +67,9 @@ class UploadResultTable extends GetWidget<UploadResultController> {
                               height: 24,
                               padding: EdgeInsets.all(1),
                               child: TextFormField(
+                                style: CustomTextStyles.bodyMedium_1,
                                 keyboardType: TextInputType.number,
+                                textAlign: TextAlign.center,
                                 decoration: InputDecoration(),
                               ),
                             ))),

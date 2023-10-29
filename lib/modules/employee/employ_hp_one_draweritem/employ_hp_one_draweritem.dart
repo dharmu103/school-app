@@ -16,7 +16,7 @@ class EmployDraweritem extends StatelessWidget {
 
     return Drawer(
       child: Container(
-        width: 325.h,
+        width: 350.h,
         padding: EdgeInsets.symmetric(
           horizontal: 14.h,
           vertical: 58.v,
@@ -272,7 +272,7 @@ class EmployDraweritem extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(left: 16.h),
                       child: Text(
-                        "Upload Assignment Status ".tr,
+                        "Upload Assignment Status".tr,
                         style: CustomTextStyles.titleSmallOnPrimary,
                         overflow: TextOverflow.ellipsis,
                       ),

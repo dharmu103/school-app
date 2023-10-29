@@ -35,8 +35,7 @@ class UploadResultScreen extends GetView<UploadResultController> {
                           children: [
                             Padding(
                                 padding: EdgeInsets.only(),
-                                child: Text(
-                                    "lbl_attendence".tr + " (6 August) ",
+                                child: Text("Result",
                                     style: CustomTextStyles
                                         .titleMediumPrimaryContainer))
                           ]))),

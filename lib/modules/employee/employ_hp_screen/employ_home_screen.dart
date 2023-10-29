@@ -1,5 +1,6 @@
 import 'package:school_app/widgets/custom_image_view.dart';
 import 'package:school_app/widgets/employee_app_bar.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 import '../employ_hp_one_draweritem/employ_hp_one_draweritem.dart';
 import 'controller/employ_home_controller.dart';
@@ -49,11 +50,48 @@ class EmployHomeScreen extends GetWidget<EmployHomeController> {
                     style: CustomTextStyles.titleLargeOnPrimary),
               ],
             ),
-            CalendarDatePicker(
-                initialDate: DateTime.now(),
-                firstDate: DateTime(2021),
-                lastDate: DateTime(2024),
-                onDateChanged: (v) {}),
+            Container(
+              height: Get.height * 0.42,
+              padding: EdgeInsets.symmetric(horizontal: 12.h),
+              child: SfDateRangePicker(
+                headerHeight: 50.v,
+                headerStyle: DateRangePickerHeaderStyle(
+                    textStyle: CustomTextStyles.titleMediumBlack900),
+                selectionTextStyle: CustomTextStyles.titleMediumBluegray900,
+                onSelectionChanged: (v) {},
+                selectionMode: DateRangePickerSelectionMode.single,
+                monthCellStyle: DateRangePickerMonthCellStyle(
+                    todayTextStyle: CustomTextStyles.titleMediumBluegray900,
+                    specialDatesTextStyle: CustomTextStyles
+                        .titleMediumBluegray900
+                        ?.copyWith(color: Colors.white),
+                    specialDatesDecoration: BoxDecoration(
+                        shape: BoxShape.circle, color: appTheme.red700),
+                    textStyle: CustomTextStyles.titleMediumBluegray900,
+                    weekendTextStyle: CustomTextStyles.titleMediumRedA700,
+                    //   leadingDatesTextStyle:
+                    //       CustomTextStyles.bodyMedium13,
+                    //   trailingDatesTextStyle:
+                    //       CustomTextStyles.bodyMedium13,
+                    blackoutDateTextStyle: CustomTextStyles.titleMediumRedA700),
+                monthViewSettings: DateRangePickerMonthViewSettings(
+                    numberOfWeeksInView: 6,
+                    //   showTrailingAndLeadingDates: true,
+                    viewHeaderStyle: DateRangePickerViewHeaderStyle(
+                        textStyle: CustomTextStyles.titleMediumBluegray900),
+                    firstDayOfWeek: 7,
+                    weekendDays: [
+                      7
+                    ],
+                    specialDates: [
+                      DateTime(2023, 10, 10),
+                      DateTime(2023, 10, 26)
+                    ]),
+                initialSelectedRange: PickerDateRange(
+                    DateTime.now().subtract(const Duration(days: 4)),
+                    DateTime.now().add(const Duration(days: 3))),
+              ),
+            ),
             Container(
               padding: EdgeInsets.only(
                 left: 24.h,

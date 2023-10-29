@@ -54,7 +54,7 @@ class CoverScreen extends StatelessWidget {
                             margin: EdgeInsets.only(left: 30.h, right: 32.h),
                             child: Text("msg_hello_and_welcome".tr,
                                 maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
+                                // overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                                 style: theme.textTheme.headlineLarge!
                                     .copyWith(height: 1.31))),
@@ -77,7 +77,7 @@ class CoverScreen extends StatelessWidget {
                             onTap: () {
                               Get.toNamed(AppRoutes.signInAsScreen);
                             },
-                            width: 170.v,
+                            width: 170.h,
                             text: "lbl_let_s_start".tr,
                             buttonStyle: CustomButtonStyles.fillBlack),
                         SizedBox(

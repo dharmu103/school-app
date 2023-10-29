@@ -105,6 +105,43 @@ class PassbookScreen extends GetWidget<TransactionController> {
                                 ],
                               ),
                             ),
+                            Padding(
+                              padding: EdgeInsets.only(
+                                left: 24.h,
+                              ),
+                              child: Row(
+                                children: [
+                                  Text("October",
+                                      style:
+                                          CustomTextStyles.titleSmallPrimary),
+                                ],
+                              ),
+                            ),
+                            ListView.builder(
+                                padding: EdgeInsets.zero,
+                                itemCount: 5,
+                                shrinkWrap: true,
+                                physics: ScrollPhysics(),
+                                itemBuilder: (itemBuilder, index) {
+                                  return Padding(
+                                    padding: EdgeInsets.symmetric(
+                                        vertical: 8.v, horizontal: 24.h),
+                                    child: ListcanteenfoodItemWidget(),
+                                  );
+                                }),
+                            Padding(
+                              padding: EdgeInsets.only(
+                                top: 14.v,
+                                left: 24.h,
+                              ),
+                              child: Row(
+                                children: [
+                                  Text("November",
+                                      style:
+                                          CustomTextStyles.titleSmallPrimary),
+                                ],
+                              ),
+                            ),
                             ListView.builder(
                                 padding: EdgeInsets.zero,
                                 itemCount: 5,
