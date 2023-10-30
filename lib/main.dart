@@ -10,6 +10,7 @@ import 'firebase_options.dart';
 import 'core/app_export.dart';
 import 'modules/student/worksheet/worksheet_page.dart';
 import 'modules/vendor/transaction_screen/transaction_screen.dart';
+import 'package:device_preview/device_preview.dart';
 
 var firestCamera;
 void main() async {
@@ -23,7 +24,13 @@ void main() async {
       options: DefaultFirebaseOptions.currentPlatform,
     );
     Logger.init(kReleaseMode ? LogMode.live : LogMode.debug);
-    runApp(MyApp());
+    runApp(
+      //   DevicePreview(
+      //     enabled: kReleaseMode,
+      //     builder: (context) =>
+      MyApp(), // Wrap your app
+      //   ),
+    );
   });
 }
 
@@ -35,6 +42,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: theme,
       translations: AppLocalization(),
+      //   useInheritedMediaQuery: true,
+      //   //   locale: DevicePreview.locale(context),
+      //   builder: DevicePreview.appBuilder,
       locale: Get.deviceLocale, //for setting localization strings
       fallbackLocale: Locale('en', 'US'),
       title: 'school_app',

@@ -42,7 +42,7 @@ class VendorHpScreen extends GetWidget<VendorHpController> {
           body: Container(
               width: Get.width,
               // height: Get.height,
-              //   padding: EdgeInsets.only(top: 53.v),
+              //   padding: EdgeInsets.only(top: 53),
               decoration: BoxDecoration(
                 color: Colors.black,
                 gradient: LinearGradient(
@@ -75,21 +75,21 @@ class VendorHpScreen extends GetWidget<VendorHpController> {
                   ),
                   CustomImageView(
                     svgPath: ImageConstant.imgStarpattern,
-                    height: 62.v,
-                    width: 333.h,
+                    height: 62,
+                    width: 333,
                     alignment: Alignment.topCenter,
-                    margin: EdgeInsets.only(top: 116.v),
+                    margin: EdgeInsets.only(top: 116),
                   ),
                   CustomImageView(
                     svgPath: ImageConstant.imgStarpattern,
-                    height: 62.v,
-                    width: 333.h,
+                    height: 62,
+                    width: 333,
                     alignment: Alignment.topCenter,
-                    margin: EdgeInsets.only(top: 70.v),
+                    margin: EdgeInsets.only(top: 70),
                   ),
                   Container(
                     width: Get.width,
-                    margin: EdgeInsets.only(top: 93.v),
+                    margin: EdgeInsets.only(top: 93),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadiusStyle.roundedBorderUp25,
@@ -98,12 +98,12 @@ class VendorHpScreen extends GetWidget<VendorHpController> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         SizedBox(
-                          height: 40.v,
+                          height: 40,
                         ),
                         Expanded(
                           child: Container(
                             //   decoration: AppDecoration.outlineBlack,
-                            width: Get.width - 48.h,
+                            width: Get.width - 48,
                             height: Get.height * 0.6,
                             child: GetBuilder<VendorHpController>(builder: (_) {
                               return QRView(
@@ -121,10 +121,10 @@ class VendorHpScreen extends GetWidget<VendorHpController> {
                           ),
                         ),
                         SizedBox(
-                          height: 40.v,
+                          height: 40,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 18.h, right: 18.h),
+                          padding: EdgeInsets.only(left: 18, right: 18),
                           child: Align(
                               alignment: Alignment.bottomCenter,
                               child: CustomElevatedButton(
@@ -132,7 +132,7 @@ class VendorHpScreen extends GetWidget<VendorHpController> {
                               )),
                         ),
                         SizedBox(
-                          height: 40.v,
+                          height: 40,
                         ),
                       ],
                     ),

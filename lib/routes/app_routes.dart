@@ -13,7 +13,7 @@ import 'package:school_app/modules/employee/upload_circular_screen/upload_circul
 import 'package:school_app/modules/student/attendence_screen/attendence_screen.dart';
 import 'package:school_app/modules/student/attendence_screen/binding/attendence_binding.dart';
 import 'package:school_app/modules/common/cover_screen/cover_screen.dart';
-import 'package:school_app/modules/student/curricular/currucular/curricular_bindings.dart';
+import 'package:school_app/modules/student/currucular/curricular_bindings.dart';
 import 'package:school_app/modules/student/home_screen/binding/home_screen_binding.dart';
 import 'package:school_app/modules/common/sign_in_with_keyboard_screen/sign_in_with_keyboard_screen.dart';
 import 'package:school_app/modules/common/sign_in_with_keyboard_screen/binding/sign_in_with_keyboard_binding.dart';
@@ -40,7 +40,7 @@ import '../modules/employee/assignment_status_screen/binding/assignment_status_b
 import '../modules/employee/upload_attendence/upload_attendence_screen.dart';
 import '../modules/employee/upload_result/binding/upload_result_binding.dart';
 import '../modules/employee/upload_result/upload_result_screen.dart';
-import '../modules/student/curricular/currucular/curricular_page.dart';
+import '../modules/student/currucular/curricular_page.dart';
 import '../modules/student/home_screen/home_screen.dart';
 import '../modules/common/sign_in_as_screen/sign_in_as_screen.dart';
 import '../modules/student/student_transaction/bindings/student_transaction_binding.dart';

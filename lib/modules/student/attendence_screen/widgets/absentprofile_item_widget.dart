@@ -20,8 +20,8 @@
 //   @override
 //   Widget build(BuildContext context) {
 //     return SizedBox(
-//       height: 47.v,
-//       width: 343.h,
+//       height: 47,
+//       width: 343,
 //       child: Stack(
 //         alignment: Alignment.centerLeft,
 //         children: [
@@ -33,28 +33,28 @@
 //               ),
 //               child: CustomImageView(
 //                 svgPath: ImageConstant.imgRectangleRed700,
-//                 height: 46.v,
-//                 width: 342.h,
+//                 height: 46,
+//                 width: 342,
 //               ),
 //             ),
 //           ),
 //           CustomImageView(
 //             svgPath: ImageConstant.imgSignalRed700,
-//             height: 47.v,
-//             width: 16.h,
+//             height: 47,
+//             width: 16,
 //             alignment: Alignment.centerLeft,
 //           ),
 //           Align(
 //             alignment: Alignment.center,
 //             child: Padding(
-//               padding: EdgeInsets.fromLTRB(28.h, 9.v, 11.h, 9.v),
+//               padding: EdgeInsets.fromLTRB(28, 9, 11, 9),
 //               child: Row(
 //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
 //                 children: [
 //                   Padding(
 //                     padding: EdgeInsets.only(
-//                       top: 1.v,
-//                       bottom: 3.v,
+//                       top: 1,
+//                       bottom: 3,
 //                     ),
 //                     child: Obx(
 //                       () => Text(
@@ -66,8 +66,8 @@
 //                   ),
 //                   Container(
 //                     padding: EdgeInsets.symmetric(
-//                       horizontal: 6.h,
-//                       vertical: 3.v,
+//                       horizontal: 6,
+//                       vertical: 3,
 //                     ),
 //                     decoration: AppDecoration.fillRed.copyWith(
 //                       borderRadius: BorderRadiusStyle.roundedBorder14,

@@ -28,7 +28,7 @@ class StudentWorksheetScreen extends GetView<StudentWorkSheetController> {
         body: Container(
             width: Get.width,
             // height: Get.height,
-            //   padding: EdgeInsets.only(top: 53.v),
+            //   padding: EdgeInsets.only(top: 53),
             decoration: BoxDecoration(
               color: Colors.black,
               gradient: LinearGradient(
@@ -61,22 +61,22 @@ class StudentWorksheetScreen extends GetView<StudentWorkSheetController> {
                 ),
                 CustomImageView(
                   svgPath: ImageConstant.imgStarpattern,
-                  height: 62.v,
-                  width: 333.h,
+                  height: 62,
+                  width: 333,
                   alignment: Alignment.topCenter,
-                  margin: EdgeInsets.only(top: 116.v),
+                  margin: EdgeInsets.only(top: 116),
                 ),
                 CustomImageView(
                   svgPath: ImageConstant.imgStarpattern,
-                  height: 62.v,
-                  width: 333.h,
+                  height: 62,
+                  width: 333,
                   alignment: Alignment.topCenter,
-                  margin: EdgeInsets.only(top: 70.v),
+                  margin: EdgeInsets.only(top: 70),
                 ),
                 Container(
                   width: Get.width,
                   height: Get.height,
-                  margin: EdgeInsets.only(top: 93.v),
+                  margin: EdgeInsets.only(top: 93),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadiusStyle.roundedBorderUp25,
@@ -89,7 +89,7 @@ class StudentWorksheetScreen extends GetView<StudentWorkSheetController> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 20.v,
+                            height: 20,
                           ),
                           Container(
                             height: 50,
@@ -101,7 +101,7 @@ class StudentWorksheetScreen extends GetView<StudentWorkSheetController> {
                               itemBuilder: (context, index) {
                                 return CircleAvatar(
                                   backgroundColor: theme.colorScheme.primary,
-                                  radius: 26.h,
+                                  radius: 26,
                                   child: Padding(
                                     padding: const EdgeInsets.all(2.0),
                                     child:
@@ -123,7 +123,7 @@ class StudentWorksheetScreen extends GetView<StudentWorkSheetController> {
                                                     index
                                                 ? theme.colorScheme.primary
                                                 : theme.scaffoldBackgroundColor,
-                                            radius: 24.h,
+                                            radius: 24,
                                             child: Padding(
                                               padding:
                                                   const EdgeInsets.all(0.0),
@@ -156,13 +156,13 @@ class StudentWorksheetScreen extends GetView<StudentWorkSheetController> {
                             //     (e) => CircleAvatar(
                             //       backgroundColor:
                             //           theme.colorScheme.primary,
-                            //       radius: 26.h,
+                            //       radius: 26,
                             //       child: Padding(
                             //         padding: const EdgeInsets.all(2.0),
                             //         child: CircleAvatar(
                             //           backgroundColor:
                             //               theme.scaffoldBackgroundColor,
-                            //           radius: 24.h,
+                            //           radius: 24,
                             //           child: Padding(
                             //             padding: const EdgeInsets.all(0.0),
                             //             child: Text(
@@ -180,7 +180,7 @@ class StudentWorksheetScreen extends GetView<StudentWorkSheetController> {
                             // ),
                           ),
                           SizedBox(
-                            height: 30.v,
+                            height: 30,
                           ),
                           GetBuilder<StudentWorkSheetController>(
                             initState: (_) {},
@@ -219,20 +219,20 @@ class WorksheetWidget extends StatelessWidget {
                       topLeft: Radius.circular(12),
                       topRight: Radius.circular(12))),
               child: Padding(
-                  padding: EdgeInsets.only(left: 11.h, top: 15.v, bottom: 15.v),
+                  padding: EdgeInsets.only(left: 11, top: 15, bottom: 15),
                   child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         CustomIconButton(
                             height: 32.adaptSize,
                             width: 32.adaptSize,
-                            padding: EdgeInsets.all(9.h),
+                            padding: EdgeInsets.all(9),
                             decoration: IconButtonStyleHelper.fillAmber,
                             child: CustomImageView(
                                 svgPath: ImageConstant.imgFisrstats)),
                         Padding(
-                            padding: EdgeInsets.only(
-                                left: 15.h, top: 3.v, bottom: 5.v),
+                            padding:
+                                EdgeInsets.only(left: 15, top: 3, bottom: 5),
                             child: Text("lbl_science".tr,
                                 style: CustomTextStyles
                                     .titleSmallPrimaryContainer))
@@ -253,13 +253,13 @@ class WorksheetWidget extends StatelessWidget {
                       : AppDecoration.fillGray100,
                   child: Padding(
                     padding: EdgeInsets.only(
-                      top: 10.v,
+                      top: 10,
                     ),
                     child: Column(
                       children: [
                         Padding(
                           padding: EdgeInsets.only(
-                            left: 11.h,
+                            left: 11,
                           ),
                           child: Row(
                             children: [
@@ -291,26 +291,26 @@ class WorksheetWidget extends StatelessWidget {
                                       height: 16.adaptSize,
                                       width: 16.adaptSize,
                                       margin: EdgeInsets.only(
-                                          left: 29.h, top: 3.v, bottom: 3.v)),
+                                          left: 29, top: 3, bottom: 3)),
                               _.workSheets.workSheets![index].isSubmitted ==
                                       true
                                   ? SizedBox()
                                   : Padding(
-                                      padding: EdgeInsets.only(
-                                          left: 8.h, bottom: 3.v),
+                                      padding:
+                                          EdgeInsets.only(left: 8, bottom: 3),
                                       child: Text(
                                           _.workSheets.workSheets![index].time
                                               .toString(),
                                           style: theme.textTheme.bodySmall)),
                               SizedBox(
-                                width: 10.h,
+                                width: 10,
                               )
                             ],
                           ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                            left: 11.h,
+                            left: 11,
                           ),
                           child: Row(
                             children: [
@@ -322,7 +322,7 @@ class WorksheetWidget extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 10.v,
+                          height: 10,
                         ),
                         index == 5
                             ? SizedBox()

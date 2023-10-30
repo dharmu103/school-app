@@ -1,4 +1,5 @@
 import 'package:school_app/modules/employee/assignment_status_screen/widget/assignment_status_table.dart';
+import 'package:school_app/widgets/dialogs/upload_success_dialog.dart';
 
 import '../../../widgets/custom_elevated_button.dart';
 import '../../../widgets/custom_image_view.dart';
@@ -26,27 +27,27 @@ class AssignmentStatusScreen extends GetWidget<AssignmentStatusController> {
         body: SizedBox(
             width: double.maxFinite,
             child: Column(children: [
-              SizedBox(height: 9.v),
+              SizedBox(height: 9),
               Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                      padding: EdgeInsets.only(left: 24.h),
+                      padding: EdgeInsets.only(left: 24),
                       child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
                                 padding: EdgeInsets.only(
-                                  left: 11.h,
+                                  left: 0,
                                 ),
-                                child: Text(" Assignment status",
+                                child: Text("Assignment status",
                                     style: CustomTextStyles
                                         .titleMediumPrimaryContainer))
                           ]))),
-              SizedBox(height: 9.v),
+              SizedBox(height: 9),
               SizedBox(
                 width: Get.width,
                 child: DataTable(
-                    headingRowHeight: 32.v,
+                    headingRowHeight: 32,
                     headingRowColor:
                         MaterialStatePropertyAll(theme.colorScheme.primary),
                     headingTextStyle: theme.textTheme.labelLarge
@@ -56,7 +57,7 @@ class AssignmentStatusScreen extends GetWidget<AssignmentStatusController> {
                     columns: [
                       DataColumn(
                         label: Container(
-                          width: 160.h,
+                          width: Get.width * 0.65 - 48,
                           child: Text(
                             "lbl_name".tr,
                           ),
@@ -78,18 +79,23 @@ class AssignmentStatusScreen extends GetWidget<AssignmentStatusController> {
                 )
               ])))
             ])),
-        bottomNavigationBar: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-          child: CustomElevatedButton(text: "Upload"),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        // persistentFooterButtons: [
-        //   CustomElevatedButton(text: "Upload"),
-        // ],
         // bottomNavigationBar: Padding(
-        //   padding: const EdgeInsets.all(18.0),
-        //   child: CustomElevatedButton(text: "Upload"),
+        //   padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+        //   child: CustomElevatedButton(
+        //     text: "Upload",
+        //     onTap: () {
+        //       Get.dialog(UploadDailogWidget());
+        //     },
+        //   ),
         // ),
+        // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        // // persistentFooterButtons: [
+        // //   CustomElevatedButton(text: "Upload"),
+        // // ],
+        // // bottomNavigationBar: Padding(
+        // //   padding: const EdgeInsets.all(18.0),
+        // //   child: CustomElevatedButton(text: "Upload"),
+        // // ),
       ),
     );
   }

@@ -20,12 +20,12 @@ import 'widgets/lists2_item_widget.dart';
 //     return SafeArea(
 //         child: Scaffold(
 //             // appBar: CustomAppBar(
-//             //     height: 47.v,
-//             //     leadingWidth: 48.h,
+//             //     height: 47,
+//             //     leadingWidth: 48,
 //             //     leading: AppbarImage(
 //             //         svgPath: ImageConstant.imgArrowleftBlack900,
 //             //         margin:
-//             //             EdgeInsets.only(left: 24.h, top: 12.v, bottom: 11.v),
+//             //             EdgeInsets.only(left: 24, top: 12, bottom: 11),
 //             //         onTap: () {
 //             //           onTapArrowleftone();
 //             //         }),
@@ -33,27 +33,27 @@ import 'widgets/lists2_item_widget.dart';
 //             //     title: AppbarSubtitle2(text: "lbl_attendence".tr)),
 //             body: Container(
 //                 width: double.maxFinite,
-//                 padding: EdgeInsets.symmetric(horizontal: 15.h, vertical: 20.v),
+//                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
 //                 child: Column(children: [
 //                   SizedBox(
-//                       height: 307.v,
-//                       width: 327.h,
+//                       height: 307,
+//                       width: 327,
 //                       child: Stack(alignment: Alignment.bottomLeft, children: [
 //                         Align(
 //                             alignment: Alignment.bottomLeft,
 //                             child: Container(
 //                                 height: 32.adaptSize,
 //                                 width: 32.adaptSize,
-//                                 margin: EdgeInsets.only(left: 4.h),
+//                                 margin: EdgeInsets.only(left: 4),
 //                                 decoration: BoxDecoration(
 //                                     color: appTheme.gray30004,
 //                                     borderRadius:
-//                                         BorderRadius.circular(16.h)))),
+//                                         BorderRadius.circular(16)))),
 //                         Align(
 //                             alignment: Alignment.bottomLeft,
 //                             child: Padding(
 //                                 padding:
-//                                     EdgeInsets.only(left: 4.h, bottom: 45.v),
+//                                     EdgeInsets.only(left: 4, bottom: 45),
 //                                 child: Column(
 //                                     mainAxisSize: MainAxisSize.min,
 //                                     children: [
@@ -63,31 +63,31 @@ import 'widgets/lists2_item_widget.dart';
 //                                           decoration: BoxDecoration(
 //                                               color: appTheme.gray30004,
 //                                               borderRadius:
-//                                                   BorderRadius.circular(16.h))),
-//                                       SizedBox(height: 13.v),
+//                                                   BorderRadius.circular(16))),
+//                                       SizedBox(height: 13),
 //                                       Container(
 //                                           height: 32.adaptSize,
 //                                           width: 32.adaptSize,
 //                                           decoration: BoxDecoration(
 //                                               color: appTheme.gray30004,
 //                                               borderRadius:
-//                                                   BorderRadius.circular(16.h))),
-//                                       SizedBox(height: 13.v),
+//                                                   BorderRadius.circular(16))),
+//                                       SizedBox(height: 13),
 //                                       Container(
 //                                           height: 32.adaptSize,
 //                                           width: 32.adaptSize,
 //                                           decoration: BoxDecoration(
 //                                               color: appTheme.gray30004,
 //                                               borderRadius:
-//                                                   BorderRadius.circular(16.h))),
-//                                       SizedBox(height: 13.v),
+//                                                   BorderRadius.circular(16))),
+//                                       SizedBox(height: 13),
 //                                       Container(
 //                                           height: 32.adaptSize,
 //                                           width: 32.adaptSize,
 //                                           decoration: BoxDecoration(
 //                                               color: appTheme.gray30004,
 //                                               borderRadius:
-//                                                   BorderRadius.circular(16.h)))
+//                                                   BorderRadius.circular(16)))
 //                                     ]))),
 //                         Align(
 //                             alignment: Alignment.center,
@@ -108,19 +108,19 @@ import 'widgets/lists2_item_widget.dart';
 //                                             height: 20.adaptSize,
 //                                             width: 20.adaptSize,
 //                                             margin:
-//                                                 EdgeInsets.only(bottom: 5.v)),
+//                                                 EdgeInsets.only(bottom: 5)),
 //                                         CustomImageView(
 //                                             svgPath:
 //                                                 ImageConstant.imgArrowright,
 //                                             height: 20.adaptSize,
 //                                             width: 20.adaptSize,
 //                                             margin: EdgeInsets.only(
-//                                                 left: 4.h, bottom: 5.v))
+//                                                 left: 4, bottom: 5))
 //                                       ]),
-//                                   SizedBox(height: 28.v),
+//                                   SizedBox(height: 28),
 //                                   SizedBox(
-//                                       height: 247.v,
-//                                       width: 305.h,
+//                                       height: 247,
+//                                       width: 305,
 //                                       child: Stack(
 //                                           alignment: Alignment.bottomRight,
 //                                           children: [
@@ -130,13 +130,13 @@ import 'widgets/lists2_item_widget.dart';
 //                                                     height: 40.adaptSize,
 //                                                     width: 40.adaptSize,
 //                                                     margin: EdgeInsets.only(
-//                                                         left: 86.h, top: 81.v),
+//                                                         left: 86, top: 81),
 //                                                     decoration: BoxDecoration(
 //                                                         color: appTheme.red700,
 //                                                         borderRadius:
 //                                                             BorderRadius
 //                                                                 .circular(
-//                                                                     20.h)))),
+//                                                                     20)))),
 //                                             Align(
 //                                                 alignment:
 //                                                     Alignment.bottomRight,
@@ -144,18 +144,18 @@ import 'widgets/lists2_item_widget.dart';
 //                                                     height: 40.adaptSize,
 //                                                     width: 40.adaptSize,
 //                                                     margin: EdgeInsets.only(
-//                                                         right: 85.h,
-//                                                         bottom: 36.v),
+//                                                         right: 85,
+//                                                         bottom: 36),
 //                                                     decoration: BoxDecoration(
 //                                                         color: appTheme.red700,
 //                                                         borderRadius:
 //                                                             BorderRadius
 //                                                                 .circular(
-//                                                                     20.h)))),
+//                                                                     20)))),
 //                                             Align(
 //                                                 alignment: Alignment.center,
 //                                                 child: SizedBox(
-//                                                     height: 247.v,
+//                                                     height: 247,
 //                                                     child: Obx(() =>
 //                                                         ListView.separated(
 //                                                           scrollDirection:
@@ -163,7 +163,7 @@ import 'widgets/lists2_item_widget.dart';
 //                                                           separatorBuilder:
 //                                                               (context, index) {
 //                                                             return SizedBox(
-//                                                                 width: 29.h);
+//                                                                 width: 29);
 //                                                           },
 //                                                           // itemCount: controller
 //                                                           //     .attendenceModelObj
@@ -188,13 +188,13 @@ import 'widgets/lists2_item_widget.dart';
 //                                           ]))
 //                                 ]))
 //                       ])),
-//                   SizedBox(height: 43.v),
+//                   SizedBox(height: 43),
 //                   Expanded(
 //                       child: Obx(() => ListView.separated(
 //                           physics: NeverScrollableScrollPhysics(),
 //                           shrinkWrap: true,
 //                           separatorBuilder: (context, index) {
-//                             return SizedBox(height: 14.v);
+//                             return SizedBox(height: 14);
 //                           },
 //                           itemCount: 4,
 //                           itemBuilder: (context, index) {
@@ -226,7 +226,7 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
           body: Container(
               width: Get.width,
               height: Get.height,
-              //   padding: EdgeInsets.only(top: 53.v),
+              //   padding: EdgeInsets.only(top: 53),
               decoration: BoxDecoration(
                 color: Colors.black,
                 gradient: LinearGradient(
@@ -259,22 +259,22 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
                   ),
                   CustomImageView(
                     svgPath: ImageConstant.imgStarpattern,
-                    height: 62.v,
-                    width: 333.h,
+                    height: 62,
+                    width: 333,
                     alignment: Alignment.topCenter,
-                    margin: EdgeInsets.only(top: 116.v),
+                    margin: EdgeInsets.only(top: 116),
                   ),
                   CustomImageView(
                     svgPath: ImageConstant.imgStarpattern,
-                    height: 62.v,
-                    width: 333.h,
+                    height: 62,
+                    width: 333,
                     alignment: Alignment.topCenter,
-                    margin: EdgeInsets.only(top: 70.v),
+                    margin: EdgeInsets.only(top: 70),
                   ),
                   Container(
                     width: Get.width,
                     height: double.maxFinite,
-                    margin: EdgeInsets.only(top: 93.v),
+                    margin: EdgeInsets.only(top: 93),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadiusStyle.roundedBorderUp25,
@@ -285,12 +285,12 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(
-                                left: 24.h, top: 18.v, right: 12.h),
+                            padding:
+                                EdgeInsets.only(left: 24, top: 18, right: 12),
                             child: Container(
                               height: Get.height * 0.42,
                               child: SfDateRangePicker(
-                                headerHeight: 50.v,
+                                headerHeight: 50,
                                 headerStyle: DateRangePickerHeaderStyle(
                                     textStyle:
                                         CustomTextStyles.titleMediumBlack900),
@@ -346,14 +346,15 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
                             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               SizedBox(
-                                width: 24.h,
+                                width: 24,
                               ),
                               Container(
                                 width: Get.width * 0.42,
                                 decoration: AppDecoration.fillGray.copyWith(
                                     borderRadius: BorderRadius.circular(12)),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(18.0),
+                                  padding: const EdgeInsets.only(
+                                      top: 18.0, left: 18, bottom: 18),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -377,7 +378,8 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
                                 decoration: AppDecoration.fillGray.copyWith(
                                     borderRadius: BorderRadius.circular(12)),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(18.0),
+                                  padding: const EdgeInsets.only(
+                                      top: 18.0, left: 18, bottom: 18),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -396,25 +398,26 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
                                 ),
                               ),
                               SizedBox(
-                                width: 24.h,
+                                width: 24,
                               ),
                             ],
                           ),
                           SizedBox(
-                            height: 20.v,
+                            height: 20,
                           ),
                           Row(
                             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               SizedBox(
-                                width: 24.h,
+                                width: 24,
                               ),
                               Container(
                                 width: Get.width * 0.42,
                                 decoration: AppDecoration.fillGray.copyWith(
                                     borderRadius: BorderRadius.circular(12)),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(18.0),
+                                  padding: const EdgeInsets.only(
+                                      top: 18.0, left: 18, bottom: 18),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -438,7 +441,8 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
                                 decoration: AppDecoration.fillGray.copyWith(
                                     borderRadius: BorderRadius.circular(12)),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(18.0),
+                                  padding: const EdgeInsets.only(
+                                      top: 18.0, left: 18, bottom: 18),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -457,14 +461,14 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
                                 ),
                               ),
                               SizedBox(
-                                width: 24.h,
+                                width: 24,
                               ),
                             ],
                           ),
                           Padding(
                             padding: const EdgeInsets.all(24.0),
                             child: Container(
-                              height: 50.v,
+                              height: 50,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(16),
                                   border: Border.all(
@@ -475,7 +479,7 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
                                   children: [
                                     Container(
                                       width: 20,
-                                      height: 50.v,
+                                      height: 50,
                                       decoration: BoxDecoration(
                                           borderRadius: BorderRadius.only(
                                               topLeft: Radius.circular(16),
@@ -505,7 +509,7 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 10.h,
+                                      width: 10,
                                     )
                                   ],
                                 ),

@@ -29,18 +29,18 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       systemOverlayStyle: SystemUiOverlayStyle(
           systemNavigationBarColor: theme.colorScheme.secondaryContainer),
       elevation: 0,
-      toolbarHeight: 93.v,
+      toolbarHeight: 93,
       automaticallyImplyLeading: false,
       backgroundColor: Colors.transparent,
       leading: leading ??
           CustomImageView(
             svgPath: ImageConstant.imgArrowleftOnerrorcontainer,
-            margin: EdgeInsets.only(left: 24.h),
+            margin: EdgeInsets.only(left: 24),
             onTap: () {
               Get.back();
             },
           ),
-      //   leadingWidth: 48.h,
+      //   leadingWidth: 48,
       title: Text(
         title.toString(),
         style: CustomTextStyles.titleLargeOnErrorContainer
@@ -55,6 +55,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => Size(
         mediaQueryData.size.width,
-        height ?? 93.v,
+        height ?? 93,
       );
 }

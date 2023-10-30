@@ -32,19 +32,19 @@ class EmployHomeScreen extends GetWidget<EmployHomeController> {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.symmetric(vertical: 14.v),
+              padding: EdgeInsets.symmetric(vertical: 14),
               decoration: AppDecoration.fillPrimary,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: 2.v),
+                  SizedBox(height: 2),
                 ],
               ),
             ),
             Row(
               children: [
                 SizedBox(
-                  width: 24.h,
+                  width: 24,
                 ),
                 Text("Select date for attendence",
                     style: CustomTextStyles.titleLargeOnPrimary),
@@ -52,9 +52,9 @@ class EmployHomeScreen extends GetWidget<EmployHomeController> {
             ),
             Container(
               height: Get.height * 0.42,
-              padding: EdgeInsets.symmetric(horizontal: 12.h),
+              padding: EdgeInsets.symmetric(horizontal: 12),
               child: SfDateRangePicker(
-                headerHeight: 50.v,
+                headerHeight: 50,
                 headerStyle: DateRangePickerHeaderStyle(
                     textStyle: CustomTextStyles.titleMediumBlack900),
                 selectionTextStyle: CustomTextStyles.titleMediumBluegray900,
@@ -94,8 +94,8 @@ class EmployHomeScreen extends GetWidget<EmployHomeController> {
             ),
             Container(
               padding: EdgeInsets.only(
-                left: 24.h,
-                right: 24.h,
+                left: 24,
+                right: 24,
               ),
               child: Column(
                 children: [
@@ -105,7 +105,7 @@ class EmployHomeScreen extends GetWidget<EmployHomeController> {
                     },
                     text: "lbl_mark_attendance".tr,
                   ),
-                  SizedBox(height: 5.v),
+                  SizedBox(height: 5),
                 ],
               ),
             ),

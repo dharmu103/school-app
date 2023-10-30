@@ -26,52 +26,63 @@ class UploadAssignmentStatusScreen
         ),
         endDrawer: Drawer(child: EmployDraweritem()),
         body: SizedBox(
-            width: double.maxFinite,
+            width: Get.width,
             child: Column(children: [
-              SizedBox(height: 9.v),
+              SizedBox(height: 9),
               Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                      padding: EdgeInsets.only(left: 24.h),
+                      padding: EdgeInsets.only(left: 24),
                       child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
                                 padding: EdgeInsets.only(
-                                  left: 11.h,
+                                  left: 0,
                                 ),
-                                child: Text(" Assignment status",
+                                child: Text("Assignment status",
                                     style: CustomTextStyles
                                         .titleMediumPrimaryContainer))
                           ]))),
-              SizedBox(height: 9.v),
-              DataTable(
-                  headingRowHeight: 32.v,
-                  headingRowColor:
-                      MaterialStatePropertyAll(theme.colorScheme.primary),
-                  headingTextStyle:
-                      theme.textTheme.labelLarge?.copyWith(color: Colors.white),
-                  columnSpacing: 10,
-                  decoration: BoxDecoration(),
-                  columns: [
-                    DataColumn(
-                      label: Container(
-                        width: 160.h,
-                        child: Text(
-                          "lbl_name".tr,
+              SizedBox(height: 9),
+              Container(
+                width: Get.width,
+                child: DataTable(
+                    headingRowHeight: 32,
+                    headingRowColor:
+                        MaterialStatePropertyAll(theme.colorScheme.primary),
+                    headingTextStyle: theme.textTheme.labelLarge
+                        ?.copyWith(color: Colors.white),
+                    columnSpacing: 0,
+                    decoration: BoxDecoration(),
+                    columns: [
+                      DataColumn(
+                        label: Container(
+                          //   color: Colors.green,
+                          width: Get.width * 0.55 - 48,
+                          child: Text(
+                            "lbl_name".tr,
+                          ),
                         ),
                       ),
-                    ),
-                    DataColumn(
-                        label: Text(
-                      "Submitted".tr,
-                    )),
-                    DataColumn(
-                        label: Text(
-                      "Not Submitted".tr,
-                    )),
-                  ],
-                  rows: []),
+                      //   DataColumn(label: Spacer()),
+                      DataColumn(
+                          label: Container(
+                        width: Get.width * 0.2,
+                        child: Text(
+                          "Submitted".tr,
+                        ),
+                      )),
+                      DataColumn(
+                          label: Container(
+                        width: Get.width * 0.25,
+                        child: Text(
+                          "Not Submitted",
+                        ),
+                      )),
+                    ],
+                    rows: []),
+              ),
               Expanded(
                   child: SingleChildScrollView(
                       child: Column(children: [
@@ -84,7 +95,19 @@ class UploadAssignmentStatusScreen
             ])),
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-          child: CustomElevatedButton(text: "Upload"),
+          child: GetBuilder<UploadAssignmentStatusController>(
+            init: UploadAssignmentStatusController(),
+            initState: (_) {},
+            builder: (_) {
+              return CustomElevatedButton(
+                buttonState: controller.btnState,
+                text: "Upload",
+                onTap: () {
+                  controller.onAssignmentStatusUpload();
+                },
+              );
+            },
+          ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         // persistentFooterButtons: [

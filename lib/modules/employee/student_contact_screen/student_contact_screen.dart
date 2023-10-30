@@ -22,13 +22,13 @@ class StudentContactScreen extends GetWidget<StudentContactController> {
             ),
             endDrawer: Drawer(child: EmployDraweritem()),
             body: SizedBox(
-                width: double.maxFinite,
+                width: Get.width,
                 child: Column(children: [
-                  SizedBox(height: 9.v),
+                  SizedBox(height: 9),
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Padding(
-                          padding: EdgeInsets.only(left: 24.h, bottom: 10),
+                          padding: EdgeInsets.only(left: 24, bottom: 10),
                           child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -48,13 +48,13 @@ class StudentContactScreen extends GetWidget<StudentContactController> {
                                               }),
                                           CustomImageView(
                                               svgPath: ImageConstant.imgVolume,
-                                              height: 16.v,
-                                              width: 13.h,
+                                              height: 16,
+                                              width: 13,
                                               alignment: Alignment.center)
                                         ])),
                                 Padding(
                                     padding: EdgeInsets.only(
-                                        left: 11.h, top: 4.v, bottom: 4.v),
+                                        left: 11, top: 4, bottom: 4),
                                     child: Text("lbl_student_contact".tr,
                                         style: CustomTextStyles
                                             .titleSmallPrimaryContainerMedium))
@@ -62,7 +62,7 @@ class StudentContactScreen extends GetWidget<StudentContactController> {
                   Container(
                     width: Get.width,
                     child: DataTable(
-                        headingRowHeight: 32.v,
+                        headingRowHeight: 32,
                         headingRowColor:
                             MaterialStatePropertyAll(theme.colorScheme.primary),
                         headingTextStyle: theme.textTheme.labelLarge
@@ -72,24 +72,28 @@ class StudentContactScreen extends GetWidget<StudentContactController> {
                         columns: [
                           DataColumn(
                             label: Container(
-                              width: 200.h,
+                              width: Get.width * 0.65 - 48,
                               child: Text(
                                 "lbl_name".tr,
                               ),
                             ),
                           ),
                           DataColumn(
-                              label: Text(
-                            "lbl_number".tr,
+                              label: Container(
+                            width: Get.width * 0.25,
+                            child: Text(
+                              "lbl_number".tr,
+                            ),
                           )),
-                          DataColumn(label: Text(""))
+                          DataColumn(
+                              label: Container(width: 15, child: Text("")))
                         ],
                         rows: []),
                   ),
                   Expanded(
                       child: SingleChildScrollView(
                           child: Column(children: [
-                    // SizedBox(height: 9.v),
+                    // SizedBox(height: 9),
                     studentContactTable()
                   ])))
                 ]))));

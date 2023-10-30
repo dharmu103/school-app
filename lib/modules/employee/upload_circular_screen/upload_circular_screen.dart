@@ -27,8 +27,7 @@ class UploadCircularScreen extends GetWidget<UploadCircularController> {
             width: double.maxFinite,
             child: Column(children: [
               Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 24.h, vertical: 18.v),
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 18),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -48,20 +47,20 @@ class UploadCircularScreen extends GetWidget<UploadCircularController> {
                                     CustomImageView(
                                         svgPath: ImageConstant
                                             .imgCalendarOnerrorcontainer,
-                                        height: 17.v,
-                                        width: 13.h,
+                                        height: 17,
+                                        width: 13,
                                         alignment: Alignment.centerLeft,
-                                        margin: EdgeInsets.only(left: 9.h))
+                                        margin: EdgeInsets.only(left: 9))
                                   ])),
                           Padding(
-                              padding: EdgeInsets.only(
-                                  left: 8.h, top: 5.v, bottom: 3.v),
+                              padding:
+                                  EdgeInsets.only(left: 8, top: 5, bottom: 3),
                               child: Text("lbl_upload_circular".tr,
                                   style: CustomTextStyles
                                       .titleSmallPrimaryContainer))
                         ]),
                         Padding(
-                            padding: EdgeInsets.only(top: 37.v, right: 1.h),
+                            padding: EdgeInsets.only(top: 37, right: 1),
                             child: GestureDetector(
                               onTap: () async {
                                 FilePickerResult? result =
@@ -70,18 +69,15 @@ class UploadCircularScreen extends GetWidget<UploadCircularController> {
                               child: DottedBorder(
                                   color: appTheme.indigo5001,
                                   padding: EdgeInsets.only(
-                                      left: 1.h,
-                                      top: 1.v,
-                                      right: 1.h,
-                                      bottom: 1.v),
-                                  strokeWidth: 1.h,
+                                      left: 1, top: 1, right: 1, bottom: 1),
+                                  strokeWidth: 1,
                                   radius: Radius.circular(20),
                                   borderType: BorderType.RRect,
                                   dashPattern: [5, 5],
                                   child: Container(
                                       width: Get.width,
                                       padding:
-                                          EdgeInsets.symmetric(vertical: 68.v),
+                                          EdgeInsets.symmetric(vertical: 68),
                                       decoration: AppDecoration.outlineIndigo
                                           .copyWith(
                                               borderRadius: BorderRadiusStyle
@@ -96,18 +92,18 @@ class UploadCircularScreen extends GetWidget<UploadCircularController> {
                                                     .imgFirrsignout,
                                                 height: 32.adaptSize,
                                                 width: 32.adaptSize),
-                                            SizedBox(height: 18.v),
+                                            SizedBox(height: 18),
                                             Text("msg_click_to_upload".tr,
                                                 style: CustomTextStyles
                                                     .bodyMediumBluegray500)
                                           ]))),
                             )),
-                        SizedBox(height: 18.v),
+                        SizedBox(height: 18),
                         Align(
                             alignment: Alignment.center,
                             child: Text("msg_doc_should_be_in".tr,
                                 style: CustomTextStyles.bodyMediumBluegray500)),
-                        SizedBox(height: 5.v)
+                        SizedBox(height: 5)
                       ]))
             ])),
         bottomNavigationBar: CustomElevatedButton(
@@ -115,7 +111,7 @@ class UploadCircularScreen extends GetWidget<UploadCircularController> {
               Get.dialog(UpdateDailogWidget());
             },
             text: "lbl_upload".tr,
-            margin: EdgeInsets.only(left: 25.h, right: 25.h, bottom: 42.v)));
+            margin: EdgeInsets.only(left: 25, right: 25, bottom: 42)));
   }
 
   /// Navigates to the previous screen.

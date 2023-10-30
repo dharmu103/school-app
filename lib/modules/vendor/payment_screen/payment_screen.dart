@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:school_app/core/app_export.dart';
 
 // ignore_for_file: must_be_immutable
-class PaymentScreen extends GetWidget<PaymentController> {
+class PaymentScreen extends GetView<PaymentController> {
   const PaymentScreen({Key? key})
       : super(
           key: key,
@@ -20,7 +20,7 @@ class PaymentScreen extends GetWidget<PaymentController> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-
+    final controller = Get.put(PaymentController());
     return SafeArea(
       child: Scaffold(
           extendBody: true,
@@ -34,7 +34,7 @@ class PaymentScreen extends GetWidget<PaymentController> {
           body: Container(
               //   width: Get.width,
               height: Get.height,
-              //   padding: EdgeInsets.only(top: 53.v),
+              //   padding: EdgeInsets.only(top: 53),
               decoration: BoxDecoration(
                 color: Colors.black,
                 gradient: LinearGradient(
@@ -67,22 +67,22 @@ class PaymentScreen extends GetWidget<PaymentController> {
                   ),
                   CustomImageView(
                     svgPath: ImageConstant.imgStarpattern,
-                    height: 62.v,
-                    width: 333.h,
+                    height: 62,
+                    width: 333,
                     alignment: Alignment.topCenter,
-                    margin: EdgeInsets.only(top: 116.v),
+                    margin: EdgeInsets.only(top: 116),
                   ),
                   CustomImageView(
                     svgPath: ImageConstant.imgStarpattern,
-                    height: 62.v,
-                    width: 333.h,
+                    height: 62,
+                    width: 333,
                     alignment: Alignment.topCenter,
-                    margin: EdgeInsets.only(top: 70.v),
+                    margin: EdgeInsets.only(top: 70),
                   ),
                   Container(
                     width: Get.width,
                     height: Get.height,
-                    margin: EdgeInsets.only(top: 93.v),
+                    margin: EdgeInsets.only(top: 93),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadiusStyle.roundedBorderUp25,
@@ -91,89 +91,136 @@ class PaymentScreen extends GetWidget<PaymentController> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         SizedBox(
-                          height: 50.v,
+                          height: 50,
                         ),
                         CustomImageView(
                           imagePath: ImageConstant.imgEllipse109,
                           height: 66.adaptSize,
                           width: 66.adaptSize,
                           radius: BorderRadius.circular(
-                            33.h,
+                            33,
                           ),
                         ),
-                        SizedBox(height: 12.v),
+                        SizedBox(height: 12),
                         Text(
                           "Muskan Sharma".tr,
                           style: CustomTextStyles.titleSmallOnPrimary,
                         ),
-                        SizedBox(height: 10.v),
+                        SizedBox(height: 10),
                         Text(
                           "Available Balance: 500",
                           style: CustomTextStyles.bodyMediumPrimary
                               .copyWith(color: theme.colorScheme.primary),
                         ),
-                        SizedBox(height: 45.v),
+                        SizedBox(height: 40),
                         Text(
                           "Enter amount to pay".tr,
                           //   style: CustomTextStyles.bodyMediumGray800,
                         ),
-                        SizedBox(height: 11.v),
+                        SizedBox(height: 11),
                         Container(
-                            height: 60.v,
-                            width: 172.h,
-                            child: TextFormField(
-                              autofocus: true,
-                              textAlign: TextAlign.center,
-                              style: CustomTextStyles.titleLargeOnPrimary,
-                              keyboardType: TextInputType.number,
-                              decoration: InputDecoration(
-                                  filled: true, border: UnderlineInputBorder()),
+                            height: 60,
+                            width: 172,
+                            child: GetBuilder<PaymentController>(
+                              init: PaymentController(),
+                              initState: (_) {},
+                              builder: (_) {
+                                return TextFormField(
+                                  controller: controller.paymentValueController,
+                                  autofocus: true,
+                                  onChanged: (v) {
+                                    if (v != "") {
+                                      if (int.parse(v) > 500) {
+                                        Get.snackbar("Not Allowed",
+                                            "Payment amount is not sufficient",
+                                            colorText: Colors.white,
+                                            backgroundColor: Colors.red);
+                                      }
+                                    }
+                                  },
+                                  textAlign: TextAlign.center,
+                                  style: CustomTextStyles.titleLargeOnPrimary,
+                                  keyboardType: TextInputType.number,
+                                  decoration: InputDecoration(
+                                      filled: true,
+                                      border: UnderlineInputBorder()),
+                                );
+                              },
                             )),
-                        SizedBox(height: 19.v),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Chip(
-                              label: Text(
-                                "100+".tr,
-                                style: CustomTextStyles.labelLargeBlack900,
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 18.h),
-                              child: Chip(
-                                label: Text(
-                                  "200+".tr,
-                                  style: CustomTextStyles.labelLargeBlack900,
+                        SizedBox(height: 19),
+                        GetBuilder<PaymentController>(
+                          init: PaymentController(),
+                          initState: (_) {},
+                          builder: (_) {
+                            return Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ChoiceChip(
+                                  onSelected: (v) =>
+                                      controller.onChipClick(100),
+                                  selected: false,
+                                  label: Text(
+                                    "100+".tr,
+                                    style: CustomTextStyles.labelLargeBlack900,
+                                  ),
                                 ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 18.h),
-                              child: Chip(
-                                label: Text(
-                                  "300+".tr,
-                                  style: CustomTextStyles.labelLargeBlack900,
+                                Padding(
+                                  padding: EdgeInsets.only(left: 18),
+                                  child: ChoiceChip(
+                                    onSelected: (v) =>
+                                        controller.onChipClick(200),
+                                    selected: false,
+                                    label: Text(
+                                      "200+".tr,
+                                      style:
+                                          CustomTextStyles.labelLargeBlack900,
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 27.h),
-                              child: Chip(
-                                label: Text(
-                                  "500+".tr,
-                                  style: CustomTextStyles.labelLargeBlack900,
+                                Padding(
+                                  padding: EdgeInsets.only(left: 18),
+                                  child: ChoiceChip(
+                                    onSelected: (v) =>
+                                        controller.onChipClick(300),
+                                    selected: false,
+                                    label: Text(
+                                      "300+".tr,
+                                      style:
+                                          CustomTextStyles.labelLargeBlack900,
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ),
-                          ],
+                                Padding(
+                                  padding: EdgeInsets.only(left: 27),
+                                  child: ChoiceChip(
+                                    onSelected: (v) =>
+                                        controller.onChipClick(500),
+                                    selected: false,
+                                    label: Text(
+                                      "500+".tr,
+                                      style:
+                                          CustomTextStyles.labelLargeBlack900,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            );
+                          },
                         ),
                         Spacer(),
-                        CustomElevatedButton(
-                          text: "lbl_continue".tr,
-                          margin: EdgeInsets.all(18),
+                        GetBuilder<PaymentController>(
+                          init: PaymentController(),
+                          initState: (_) {},
+                          builder: (_) {
+                            return CustomElevatedButton(
+                              text: "lbl_continue".tr,
+                              margin: EdgeInsets.all(18),
+                              buttonState: _.btnState,
+                              onTap: () => controller.onPay(),
+                            );
+                          },
                         ),
-                        SizedBox(height: 56.v),
+                        // SizedBox(height: 56),
                       ],
                     ),
                   ),

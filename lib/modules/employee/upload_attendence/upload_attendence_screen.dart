@@ -27,28 +27,28 @@ class UploadAttendenceScreen extends GetWidget<UploadAttendenceController> {
         body: SizedBox(
             width: double.maxFinite,
             child: Column(children: [
-              SizedBox(height: 9.v),
+              SizedBox(height: 9),
               Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                      padding: EdgeInsets.only(left: 24.h),
+                      padding: EdgeInsets.only(left: 24),
                       child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
                                 padding: EdgeInsets.only(
-                                  left: 11.h,
+                                  left: 11,
                                 ),
                                 child: Text(
                                     "lbl_attendence".tr + " (6 August) ",
                                     style: CustomTextStyles
                                         .titleMediumPrimaryContainer))
                           ]))),
-              SizedBox(height: 9.v),
+              SizedBox(height: 9),
               Container(
                 width: Get.width,
                 child: DataTable(
-                    headingRowHeight: 32.v,
+                    headingRowHeight: 32,
                     headingRowColor:
                         MaterialStatePropertyAll(theme.colorScheme.primary),
                     headingTextStyle: theme.textTheme.labelLarge
@@ -58,7 +58,7 @@ class UploadAttendenceScreen extends GetWidget<UploadAttendenceController> {
                     columns: [
                       DataColumn(
                         label: Container(
-                          width: 210.h,
+                          width: 210,
                           child: Text(
                             "lbl_name".tr,
                           ),
@@ -86,9 +86,16 @@ class UploadAttendenceScreen extends GetWidget<UploadAttendenceController> {
             ])),
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-          child: CustomElevatedButton(
-            text: "Upload",
-            onTap: () => Get.toNamed(AppRoutes.employeeScreen),
+          child: GetBuilder<UploadAttendenceController>(
+            init: UploadAttendenceController(),
+            initState: (_) {},
+            builder: (_) {
+              return CustomElevatedButton(
+                text: "Upload",
+                onTap: () => controller.onUploadAttendence(),
+                buttonState: controller.btnState,
+              );
+            },
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

@@ -16,7 +16,7 @@ class Lists2ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 20.h,
+      width: 20,
       child: Align(
         alignment: Alignment.center,
         child: Column(
@@ -32,8 +32,8 @@ class Lists2ItemWidget extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Padding(
                 padding: EdgeInsets.only(
-                  left: 7.h,
-                  top: 21.v,
+                  left: 7,
+                  top: 21,
                 ),
                 child: GetX<AttendenceController>(
                   builder: (_) => Text(
@@ -44,7 +44,7 @@ class Lists2ItemWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 22.v),
+            SizedBox(height: 22),
             GetX<AttendenceController>(
               builder: (_) => Text(
                 "",
@@ -52,7 +52,7 @@ class Lists2ItemWidget extends StatelessWidget {
                 style: theme.textTheme.bodyMedium,
               ),
             ),
-            SizedBox(height: 21.v),
+            SizedBox(height: 21),
             GetX<AttendenceController>(
               builder: (_) => Text(
                 "",
@@ -60,7 +60,7 @@ class Lists2ItemWidget extends StatelessWidget {
                 style: theme.textTheme.bodyMedium,
               ),
             ),
-            SizedBox(height: 21.v),
+            SizedBox(height: 21),
             Align(
               alignment: Alignment.centerRight,
               child: GetX<AttendenceController>(
@@ -71,7 +71,7 @@ class Lists2ItemWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 22.v),
+            SizedBox(height: 22),
             GetX<AttendenceController>(
               builder: (_) => Text(
                 "",

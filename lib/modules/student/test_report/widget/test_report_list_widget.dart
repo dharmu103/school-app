@@ -9,7 +9,7 @@ class TestReportListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: 24.h,
+        horizontal: 24,
       ),
       child: Container(
         margin: EdgeInsets.all(1),
@@ -32,13 +32,13 @@ class TestReportListTile extends StatelessWidget {
             style: CustomTextStyles.bodyMedium13,
           ),
           trailing: Container(
-            width: 50.h,
+            width: 50,
             height: 30,
             alignment: Alignment.center,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20), color: Colors.green),
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 4.v),
+              padding: EdgeInsets.symmetric(vertical: 4),
               child: Text("87"),
             ),
           ),
@@ -64,13 +64,13 @@ class TestReportListTile extends StatelessWidget {
                         ),
                         Spacer(),
                         Padding(
-                          padding: EdgeInsets.only(right: 20.h),
+                          padding: EdgeInsets.only(right: 20),
                           child: Text(
                             "100",
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: 20.h),
+                          padding: EdgeInsets.only(right: 20),
                           child: Text("74 - B"),
                         )
                       ],
@@ -84,7 +84,7 @@ class TestReportListTile extends StatelessWidget {
                 },
                 itemCount: 5),
             SizedBox(
-              height: 15.v,
+              height: 15,
             )
           ],
         ),

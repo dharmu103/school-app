@@ -19,8 +19,8 @@ class SignInAsScreen extends GetWidget<SignInAsController> {
         body: Container(
             width: double.maxFinite,
             padding: EdgeInsets.symmetric(
-              horizontal: 24.h,
-              vertical: 24.v,
+              horizontal: 24,
+              vertical: 24,
             ),
             child: GetBuilder<SignInAsController>(
               init: SignInAsController(),
@@ -35,7 +35,7 @@ class SignInAsScreen extends GetWidget<SignInAsController> {
                     Spacer(),
                     CustomElevatedButton(
                       text: "lbl_student".tr,
-                      margin: EdgeInsets.symmetric(horizontal: 22.h),
+                      margin: EdgeInsets.symmetric(horizontal: 22),
                       buttonTextStyle:
                           controller.selectedButton == "lbl_student".tr
                               ? theme.textTheme.titleMedium
@@ -51,9 +51,9 @@ class SignInAsScreen extends GetWidget<SignInAsController> {
                     CustomElevatedButton(
                       text: "lbl_employee".tr,
                       margin: EdgeInsets.only(
-                        left: 22.h,
-                        top: 19.v,
-                        right: 22.h,
+                        left: 22,
+                        top: 19,
+                        right: 22,
                       ),
                       buttonTextStyle:
                           controller.selectedButton == "lbl_employee".tr
@@ -71,9 +71,9 @@ class SignInAsScreen extends GetWidget<SignInAsController> {
                     CustomElevatedButton(
                       text: "lbl_vendor".tr,
                       margin: EdgeInsets.only(
-                        left: 22.h,
-                        top: 19.v,
-                        right: 22.h,
+                        left: 22,
+                        top: 19,
+                        right: 22,
                       ),
                       buttonTextStyle:
                           controller.selectedButton == "lbl_vendor".tr
@@ -87,7 +87,7 @@ class SignInAsScreen extends GetWidget<SignInAsController> {
                         "lbl_vendor".tr,
                       ),
                     ),
-                    SizedBox(height: 67.v),
+                    SizedBox(height: 67),
                     // CustomElevatedButton(
                     //   text: "lbl_continue".tr,
                     //   buttonStyle: CustomButtonStyles.fillBlack,

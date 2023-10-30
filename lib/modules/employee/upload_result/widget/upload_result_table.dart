@@ -15,7 +15,7 @@ class UploadResultTable extends GetWidget<UploadResultController> {
           child: Container(
             width: Get.width,
             child: DataTable(
-              headingRowHeight: 0.v,
+              headingRowHeight: 0,
               headingRowColor:
                   MaterialStatePropertyAll(theme.colorScheme.primary),
               headingTextStyle:
@@ -41,7 +41,7 @@ class UploadResultTable extends GetWidget<UploadResultController> {
                   20,
                   (index) => DataRow(cells: [
                         DataCell(Container(
-                          width: 210.h,
+                          width: 210,
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -56,7 +56,7 @@ class UploadResultTable extends GetWidget<UploadResultController> {
                         )),
                         DataCell(
                           Padding(
-                              padding: EdgeInsets.only(right: 26.h),
+                              padding: EdgeInsets.only(right: 26),
                               child:
                                   Obx(() => Text(controller.totalMarks.value))),
                         ),

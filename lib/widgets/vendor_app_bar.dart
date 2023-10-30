@@ -15,14 +15,14 @@ class VendorAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         systemOverlayStyle:
             SystemUiOverlayStyle(statusBarColor: theme.colorScheme.primary),
-        toolbarHeight: 93.v,
+        toolbarHeight: 93,
         elevation: 0,
         backgroundColor: Colors.transparent,
-        leadingWidth: 100.h,
+        leadingWidth: 100,
         leading: Container(
           alignment: Alignment.center,
           margin: EdgeInsets.only(
-            left: 20.h,
+            left: 20,
             top: 16,
             bottom: 16,
           ),
@@ -42,7 +42,7 @@ class VendorAppBar extends StatelessWidget implements PreferredSizeWidget {
         actions: [
           CustomImageView(
             svgPath: ImageConstant.imgMenuburger,
-            margin: EdgeInsets.only(right: 24.h),
+            margin: EdgeInsets.only(right: 24),
             onTap: () {
               Scaffold.of(context).openEndDrawer();
             },
@@ -56,6 +56,6 @@ class VendorAppBar extends StatelessWidget implements PreferredSizeWidget {
   // TODO: implement preferredSize
   Size get preferredSize => Size(
         mediaQueryData.size.width,
-        93.v,
+        93,
       );
 }

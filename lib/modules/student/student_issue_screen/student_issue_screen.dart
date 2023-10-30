@@ -32,7 +32,7 @@ class StudentIssueScreen extends StatelessWidget {
         body: Container(
             width: Get.width,
             // height: Get.height,
-            //   padding: EdgeInsets.only(top: 53.v),
+            //   padding: EdgeInsets.only(top: 53),
             decoration: BoxDecoration(
               color: Colors.black,
               gradient: LinearGradient(
@@ -65,22 +65,22 @@ class StudentIssueScreen extends StatelessWidget {
                 ),
                 CustomImageView(
                   svgPath: ImageConstant.imgStarpattern,
-                  height: 62.v,
-                  width: 333.h,
+                  height: 62,
+                  width: 333,
                   alignment: Alignment.topCenter,
-                  margin: EdgeInsets.only(top: 116.v),
+                  margin: EdgeInsets.only(top: 116),
                 ),
                 CustomImageView(
                   svgPath: ImageConstant.imgStarpattern,
-                  height: 62.v,
-                  width: 333.h,
+                  height: 62,
+                  width: 333,
                   alignment: Alignment.topCenter,
-                  margin: EdgeInsets.only(top: 70.v),
+                  margin: EdgeInsets.only(top: 70),
                 ),
                 Container(
                   width: Get.width,
                   height: Get.height,
-                  margin: EdgeInsets.only(top: 93.v),
+                  margin: EdgeInsets.only(top: 93),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadiusStyle.roundedBorderUp25,
@@ -88,18 +88,18 @@ class StudentIssueScreen extends StatelessWidget {
                   child: SingleChildScrollView(
                     physics: ScrollPhysics(),
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 24.h),
+                      padding: EdgeInsets.symmetric(horizontal: 24),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           // Padding(
                           //     padding: EdgeInsets.only(
-                          //         left: 8.h, top: 25.v, bottom: 3.v),
+                          //         left: 8, top: 25, bottom: 3),
                           //     child: Text("lbl_upload_circular".tr,
                           //         style: CustomTextStyles
                           //             .titleSmallPrimaryContainer)),
                           Padding(
-                              padding: EdgeInsets.only(top: 37.v, right: 1.h),
+                              padding: EdgeInsets.only(top: 37, right: 1),
                               child: GestureDetector(
                                 onTap: () async {
                                   FilePickerResult? result =
@@ -114,18 +114,15 @@ class StudentIssueScreen extends StatelessWidget {
                                 child: DottedBorder(
                                     color: appTheme.indigo5001,
                                     padding: EdgeInsets.only(
-                                        left: 1.h,
-                                        top: 1.v,
-                                        right: 1.h,
-                                        bottom: 1.v),
-                                    strokeWidth: 1.h,
+                                        left: 1, top: 1, right: 1, bottom: 1),
+                                    strokeWidth: 1,
                                     radius: Radius.circular(20),
                                     borderType: BorderType.RRect,
                                     dashPattern: [5, 5],
                                     child: Container(
                                         width: Get.width,
-                                        padding: EdgeInsets.symmetric(
-                                            vertical: 68.v),
+                                        padding:
+                                            EdgeInsets.symmetric(vertical: 68),
                                         decoration: AppDecoration.outlineIndigo
                                             .copyWith(
                                                 borderRadius: BorderRadiusStyle
@@ -140,7 +137,7 @@ class StudentIssueScreen extends StatelessWidget {
                                                       .imgFirrsignout,
                                                   height: 32.adaptSize,
                                                   width: 32.adaptSize),
-                                              SizedBox(height: 18.v),
+                                              SizedBox(height: 18),
                                               Text("msg_click_to_upload".tr,
                                                   style: CustomTextStyles
                                                       .bodyMediumBluegray500)
@@ -161,7 +158,7 @@ class StudentIssueScreen extends StatelessWidget {
                             ],
                           ),
                           CustomTextFormField(
-                            margin: EdgeInsets.only(top: 15.v),
+                            margin: EdgeInsets.only(top: 15),
                             maxLines: 8,
                             //  width: 100,
                             height: 150, hintText: "Type here.",

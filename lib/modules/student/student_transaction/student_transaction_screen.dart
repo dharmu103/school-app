@@ -27,7 +27,7 @@ class StudentTransactionScreen extends GetWidget<StudentTransactionController> {
       body: Container(
           width: Get.width,
           // height: Get.height,
-          //   padding: EdgeInsets.only(top: 53.v),
+          //   padding: EdgeInsets.only(top: 53),
           decoration: BoxDecoration(
             color: Colors.black,
             gradient: LinearGradient(
@@ -60,22 +60,22 @@ class StudentTransactionScreen extends GetWidget<StudentTransactionController> {
               ),
               CustomImageView(
                 svgPath: ImageConstant.imgStarpattern,
-                height: 62.v,
-                width: 333.h,
+                height: 62,
+                width: 333,
                 alignment: Alignment.topCenter,
-                margin: EdgeInsets.only(top: 116.v),
+                margin: EdgeInsets.only(top: 116),
               ),
               CustomImageView(
                 svgPath: ImageConstant.imgStarpattern,
-                height: 62.v,
-                width: 333.h,
+                height: 62,
+                width: 333,
                 alignment: Alignment.topCenter,
-                margin: EdgeInsets.only(top: 70.v),
+                margin: EdgeInsets.only(top: 70),
               ),
               Container(
                 width: Get.width,
                 height: Get.height,
-                margin: EdgeInsets.only(top: 93.v),
+                margin: EdgeInsets.only(top: 93),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadiusStyle.roundedBorderUp25,
@@ -86,23 +86,23 @@ class StudentTransactionScreen extends GetWidget<StudentTransactionController> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       SizedBox(
-                        height: 25.v,
+                        height: 25,
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 24.h, vertical: 10.v),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 24, vertical: 10),
                         child: IntrinsicHeight(
                           child: Row(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 CustomImageView(
-                                  width: 50.h,
+                                  width: 50,
                                   fit: BoxFit.contain,
                                   imagePath: ImageConstant.imgEllipse109,
                                 ),
                                 SizedBox(
-                                  width: 15.h,
+                                  width: 15,
                                 ),
                                 Column(
                                     crossAxisAlignment:
@@ -121,7 +121,7 @@ class StudentTransactionScreen extends GetWidget<StudentTransactionController> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            left: 24.h, top: 28.v, bottom: 15.v, right: 24.h),
+                            left: 24, top: 28, bottom: 15, right: 24),
                         child: Row(
                           children: [
                             Text(
@@ -143,15 +143,15 @@ class StudentTransactionScreen extends GetWidget<StudentTransactionController> {
                           itemBuilder: (itemBuilder, index) {
                             return Padding(
                               padding: EdgeInsets.symmetric(
-                                  vertical: 8.v, horizontal: 24.h),
+                                  vertical: 8, horizontal: 24),
                               child: ListTileOfTransactionmWidget(),
                             );
                           }),
                       SizedBox(
-                        height: 15.v,
+                        height: 15,
                       ),
                       SizedBox(
-                        height: 15.v,
+                        height: 15,
                       ),
                     ],
                   ),
@@ -161,7 +161,7 @@ class StudentTransactionScreen extends GetWidget<StudentTransactionController> {
           )),
       bottomNavigationBar: Container(
         color: Colors.white,
-        height: 30,
+        height: 60,
         child: GestureDetector(
           onTap: () {
             Get.toNamed(AppRoutes.studentIssueScreen);

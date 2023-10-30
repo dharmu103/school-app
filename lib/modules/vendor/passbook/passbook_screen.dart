@@ -26,7 +26,7 @@ class PassbookScreen extends GetWidget<TransactionController> {
             body: Container(
                 width: Get.width,
                 // height: Get.height,
-                //   padding: EdgeInsets.only(top: 53.v),
+                //   padding: EdgeInsets.only(top: 53),
                 decoration: BoxDecoration(
                   color: Colors.black,
                   gradient: LinearGradient(
@@ -59,22 +59,22 @@ class PassbookScreen extends GetWidget<TransactionController> {
                     ),
                     CustomImageView(
                       svgPath: ImageConstant.imgStarpattern,
-                      height: 62.v,
-                      width: 333.h,
+                      height: 62,
+                      width: 333,
                       alignment: Alignment.topCenter,
-                      margin: EdgeInsets.only(top: 116.v),
+                      margin: EdgeInsets.only(top: 116),
                     ),
                     CustomImageView(
                       svgPath: ImageConstant.imgStarpattern,
-                      height: 62.v,
-                      width: 333.h,
+                      height: 62,
+                      width: 333,
                       alignment: Alignment.topCenter,
-                      margin: EdgeInsets.only(top: 70.v),
+                      margin: EdgeInsets.only(top: 70),
                     ),
                     Container(
                       width: Get.width,
                       height: Get.height,
-                      margin: EdgeInsets.only(top: 93.v),
+                      margin: EdgeInsets.only(top: 93),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadiusStyle.roundedBorderUp25,
@@ -85,14 +85,11 @@ class PassbookScreen extends GetWidget<TransactionController> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             SizedBox(
-                              height: 25.v,
+                              height: 25,
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                  left: 24.h,
-                                  top: 18.v,
-                                  bottom: 15.v,
-                                  right: 24.h),
+                                  left: 24, top: 18, bottom: 15, right: 24),
                               child: Row(
                                 children: [
                                   Text(
@@ -107,7 +104,7 @@ class PassbookScreen extends GetWidget<TransactionController> {
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                left: 24.h,
+                                left: 24,
                               ),
                               child: Row(
                                 children: [
@@ -125,14 +122,14 @@ class PassbookScreen extends GetWidget<TransactionController> {
                                 itemBuilder: (itemBuilder, index) {
                                   return Padding(
                                     padding: EdgeInsets.symmetric(
-                                        vertical: 8.v, horizontal: 24.h),
+                                        vertical: 8, horizontal: 24),
                                     child: ListcanteenfoodItemWidget(),
                                   );
                                 }),
                             Padding(
                               padding: EdgeInsets.only(
-                                top: 14.v,
-                                left: 24.h,
+                                top: 14,
+                                left: 24,
                               ),
                               child: Row(
                                 children: [
@@ -150,7 +147,7 @@ class PassbookScreen extends GetWidget<TransactionController> {
                                 itemBuilder: (itemBuilder, index) {
                                   return Padding(
                                     padding: EdgeInsets.symmetric(
-                                        vertical: 8.v, horizontal: 24.h),
+                                        vertical: 8, horizontal: 24),
                                     child: ListcanteenfoodItemWidget(),
                                   );
                                 })

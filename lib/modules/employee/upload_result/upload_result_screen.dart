@@ -1,4 +1,5 @@
 import 'package:school_app/widgets/custom_elevated_button.dart';
+import 'package:school_app/widgets/dialogs/upload_success_dialog.dart';
 
 import '../../../core/app_export.dart';
 import '../../../widgets/employee_app_bar.dart';
@@ -25,11 +26,11 @@ class UploadResultScreen extends GetView<UploadResultController> {
         body: SizedBox(
             width: double.maxFinite,
             child: Column(children: [
-              SizedBox(height: 9.v),
+              SizedBox(height: 9),
               Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                      padding: EdgeInsets.only(left: 24.h),
+                      padding: EdgeInsets.only(left: 24),
                       child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -39,11 +40,11 @@ class UploadResultScreen extends GetView<UploadResultController> {
                                     style: CustomTextStyles
                                         .titleMediumPrimaryContainer))
                           ]))),
-              SizedBox(height: 9.v),
+              SizedBox(height: 9),
               Container(
                 width: Get.width,
                 child: DataTable(
-                  headingRowHeight: 32.v,
+                  headingRowHeight: 32,
                   headingRowColor:
                       MaterialStatePropertyAll(theme.colorScheme.primary),
                   headingTextStyle:
@@ -53,7 +54,7 @@ class UploadResultScreen extends GetView<UploadResultController> {
                   columns: [
                     DataColumn(
                       label: Container(
-                        width: 200.h,
+                        width: 200,
                         child: Text(
                           "lbl_name".tr,
                         ),
@@ -67,8 +68,8 @@ class UploadResultScreen extends GetView<UploadResultController> {
                           "Out of".tr,
                         ),
                         Container(
-                            width: 35.h,
-                            height: 32.v,
+                            width: 35,
+                            height: 32,
                             // padding: EdgeInsets.only(left: 5),
                             child: Center(
                               child: TextFormField(
@@ -106,7 +107,7 @@ class UploadResultScreen extends GetView<UploadResultController> {
               Expanded(
                   child: SingleChildScrollView(
                       child: Column(children: [
-                // SizedBox(height: 9.v),
+                // SizedBox(height: 9),
                 SizedBox(width: Get.width, child: UploadResultTable()),
                 SizedBox(
                   height: 200,
@@ -117,7 +118,7 @@ class UploadResultScreen extends GetView<UploadResultController> {
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
           child: CustomElevatedButton(
             text: "Upload",
-            onTap: () => Get.toNamed(AppRoutes.employeeScreen),
+            onTap: () => Get.dialog(UploadDailogWidget()),
           ),
         ),
         // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

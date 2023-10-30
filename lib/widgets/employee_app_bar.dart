@@ -29,15 +29,15 @@ class EmployeeAppBar extends StatelessWidget implements PreferredSizeWidget {
           : CustomImageView(
               svgPath: ImageConstant.imgArrowleftOnerrorcontainer,
               margin: EdgeInsets.only(
-                top: 15.v,
-                left: 24.h,
+                top: 15,
+                left: 24,
               ),
               onTap: () {
                 Get.back();
               },
             ),
       title: Padding(
-        padding: EdgeInsets.only(top: 15.v),
+        padding: EdgeInsets.only(top: 15),
         child: Text(
           title ?? "",
           style: CustomTextStyles.bodyLargeOnErrorContainer
@@ -49,9 +49,9 @@ class EmployeeAppBar extends StatelessWidget implements PreferredSizeWidget {
         CustomImageView(
           svgPath: ImageConstant.imgMenuburger,
           margin: EdgeInsets.only(
-            left: 24.h,
-            top: 1.v,
-            right: 24.h,
+            left: 24,
+            top: 1,
+            right: 24,
           ),
           onTap: () {
             print("open drawer");
@@ -67,6 +67,6 @@ class EmployeeAppBar extends StatelessWidget implements PreferredSizeWidget {
   // TODO: implement preferredSize
   Size get preferredSize => Size(
         mediaQueryData.size.width,
-        height ?? 70.v,
+        height ?? 70,
       );
 }

@@ -8,7 +8,7 @@ class UpdatesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 6.h),
+      padding: EdgeInsets.symmetric(horizontal: 6),
       child: ListTile(
         leading: CircleAvatar(
           backgroundColor: ColorSchemes.primaryColorScheme.primary,

@@ -15,7 +15,8 @@ class CoverScreen extends StatelessWidget {
           CustomImageView(
             width: Get.width,
             height: Get.height,
-            imagePath: "assets/images/cover.jpeg",
+            imagePath: "assets/images/IMAGE.png",
+            fit: BoxFit.cover,
           ),
           Container(
             width: Get.width,
@@ -37,32 +38,30 @@ class CoverScreen extends StatelessWidget {
           Container(
               width: Get.width,
               height: Get.height,
-              //   padding: EdgeInsets.only(bottom: 56.v),
+              //   padding: EdgeInsets.only(bottom: 56),
 
               child: Container(
                   width: double.maxFinite,
                   //   height: Get.height,
                   decoration: BoxDecoration(),
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 35.h, vertical: 18.v),
+                  padding: EdgeInsets.symmetric(horizontal: 35, vertical: 18),
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Spacer(),
                         Container(
-                            width: 242.h,
-                            margin: EdgeInsets.only(left: 30.h, right: 32.h),
+                            width: 242,
                             child: Text("msg_hello_and_welcome".tr,
                                 maxLines: 2,
                                 // overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                                 style: theme.textTheme.headlineLarge!
                                     .copyWith(height: 1.31))),
-                        SizedBox(height: 18.v),
+                        SizedBox(height: 18),
                         Opacity(
                             opacity: 0.6,
                             child: SizedBox(
-                                width: 304.h,
+                                width: 304,
                                 child: Text("msg_get_an_overview".tr,
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
@@ -71,17 +70,17 @@ class CoverScreen extends StatelessWidget {
                                         .bodyMediumOnErrorContainer13_1
                                         .copyWith(height: 1.69)))),
                         SizedBox(
-                          height: 50.v,
+                          height: 50,
                         ),
                         CustomElevatedButton(
                             onTap: () {
                               Get.toNamed(AppRoutes.signInAsScreen);
                             },
-                            width: 170.h,
+                            width: Get.width * 0.4,
                             text: "lbl_let_s_start".tr,
                             buttonStyle: CustomButtonStyles.fillBlack),
                         SizedBox(
-                          height: 50.v,
+                          height: 50,
                         ),
                       ]))),
         ],

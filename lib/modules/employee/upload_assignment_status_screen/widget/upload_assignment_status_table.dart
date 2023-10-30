@@ -7,7 +7,7 @@ import '../../upload_attendence/controller/upload_attendence_controller.dart';
 
 Widget uploadAssignmentStatusTable() {
   return DataTable(
-    headingRowHeight: 0.v,
+    headingRowHeight: 0,
     headingRowColor: MaterialStatePropertyAll(theme.colorScheme.primary),
     headingTextStyle: theme.textTheme.labelLarge?.copyWith(color: Colors.white),
     columnSpacing: 10,
@@ -31,7 +31,7 @@ Widget uploadAssignmentStatusTable() {
         20,
         (index) => DataRow(cells: [
               DataCell(Container(
-                width: 160.h,
+                width: 160,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -45,7 +45,7 @@ Widget uploadAssignmentStatusTable() {
                 ),
               )),
               DataCell(Padding(
-                  padding: EdgeInsets.only(right: 26.h),
+                  padding: EdgeInsets.only(right: 26),
                   child: GetBuilder<UploadAssignmentStatusController>(
                     builder: (_) {
                       return Container(

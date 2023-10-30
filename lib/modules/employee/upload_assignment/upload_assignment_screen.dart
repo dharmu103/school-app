@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:school_app/core/app_export.dart';
 import 'package:school_app/main.dart';
 import 'package:school_app/widgets/custom_app_bar_widget.dart';
+import 'package:school_app/widgets/dialogs/upload_success_dialog.dart';
 
 import '../../../widgets/custom_elevated_button.dart';
 import '../../../widgets/custom_image_view.dart';
@@ -28,8 +29,7 @@ class UploadAssignmentScreen extends StatelessWidget {
             width: double.maxFinite,
             child: Column(children: [
               Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 24.h, vertical: 18.v),
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 18),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -49,20 +49,20 @@ class UploadAssignmentScreen extends StatelessWidget {
                                     CustomImageView(
                                         svgPath: ImageConstant
                                             .imgCalendarOnerrorcontainer,
-                                        height: 17.v,
-                                        width: 13.h,
+                                        height: 17,
+                                        width: 13,
                                         alignment: Alignment.centerLeft,
-                                        margin: EdgeInsets.only(left: 9.h))
+                                        margin: EdgeInsets.only(left: 9))
                                   ])),
                           Padding(
-                              padding: EdgeInsets.only(
-                                  left: 8.h, top: 5.v, bottom: 3.v),
+                              padding:
+                                  EdgeInsets.only(left: 8, top: 5, bottom: 3),
                               child: Text("Upload Assignment".tr,
                                   style: CustomTextStyles
                                       .titleSmallPrimaryContainer))
                         ]),
                         SizedBox(
-                          height: 25.v,
+                          height: 25,
                         ),
                         Container(
                           decoration: AppDecoration.outlineBlack,
@@ -76,8 +76,8 @@ class UploadAssignmentScreen extends StatelessWidget {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Container(
-                                    width: 143.h,
-                                    height: 33.v,
+                                    width: 143,
+                                    height: 33,
                                     child: ElevatedButton(
                                       onPressed: () {
                                         Get.to(TakePictureScreen(
@@ -100,8 +100,8 @@ class UploadAssignmentScreen extends StatelessWidget {
                                     ),
                                   ),
                                   Container(
-                                    width: 143.h,
-                                    height: 33.v,
+                                    width: 143,
+                                    height: 33,
                                     child: ElevatedButton(
                                       onPressed: () async {
                                         FilePickerResult? result =
@@ -127,13 +127,13 @@ class UploadAssignmentScreen extends StatelessWidget {
                                 ],
                               ),
                               SizedBox(
-                                height: 25.v,
+                                height: 25,
                               )
                             ],
                           ),
                         ),
                         Padding(
-                            padding: EdgeInsets.only(top: 37.v, right: 1.h),
+                            padding: EdgeInsets.only(top: 37, right: 1),
                             child: GestureDetector(
                               onTap: () async {
                                 await FilePicker.platform.pickFiles();
@@ -141,18 +141,15 @@ class UploadAssignmentScreen extends StatelessWidget {
                               child: DottedBorder(
                                   color: appTheme.indigo5001,
                                   padding: EdgeInsets.only(
-                                      left: 1.h,
-                                      top: 1.v,
-                                      right: 1.h,
-                                      bottom: 1.v),
-                                  strokeWidth: 1.h,
+                                      left: 1, top: 1, right: 1, bottom: 1),
+                                  strokeWidth: 1,
                                   radius: Radius.circular(20),
                                   borderType: BorderType.RRect,
                                   dashPattern: [5, 5],
                                   child: Container(
                                       width: Get.width,
                                       padding:
-                                          EdgeInsets.symmetric(vertical: 68.v),
+                                          EdgeInsets.symmetric(vertical: 68),
                                       decoration: AppDecoration.outlineIndigo
                                           .copyWith(
                                               borderRadius: BorderRadiusStyle
@@ -167,23 +164,24 @@ class UploadAssignmentScreen extends StatelessWidget {
                                                     .imgFirrsignout,
                                                 height: 32.adaptSize,
                                                 width: 32.adaptSize),
-                                            SizedBox(height: 18.v),
+                                            SizedBox(height: 18),
                                             Text("msg_click_to_upload".tr,
                                                 style: CustomTextStyles
                                                     .bodyMediumBluegray500)
                                           ]))),
                             )),
-                        SizedBox(height: 18.v),
+                        SizedBox(height: 18),
                         Align(
                             alignment: Alignment.center,
                             child: Text("msg_doc_should_be_in".tr,
                                 style: CustomTextStyles.bodyMediumBluegray500)),
-                        SizedBox(height: 5.v)
+                        SizedBox(height: 5)
                       ]))
             ])),
         bottomNavigationBar: CustomElevatedButton(
+            onTap: () => Get.dialog(UploadDailogWidget()),
             text: "lbl_upload".tr,
-            margin: EdgeInsets.only(left: 25.h, right: 25.h, bottom: 42.v)));
+            margin: EdgeInsets.only(left: 25, right: 25, bottom: 42)));
   }
 }
 

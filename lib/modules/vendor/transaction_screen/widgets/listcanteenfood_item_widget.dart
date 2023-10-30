@@ -25,19 +25,19 @@ class ListcanteenfoodItemWidget extends StatelessWidget {
       children: [
         CustomImageView(
           svgPath: ImageConstant.imgCalendarYellow900,
-          height: 30.v,
-          width: 28.h,
+          height: 30,
+          width: 28,
           margin: EdgeInsets.only(
-            top: 16.v,
-            bottom: 14.v,
+            top: 16,
+            bottom: 14,
           ),
         ),
         Expanded(
           child: Container(
-            margin: EdgeInsets.only(left: 21.h),
+            margin: EdgeInsets.only(left: 21),
             padding: EdgeInsets.symmetric(
-              horizontal: 15.h,
-              vertical: 6.v,
+              horizontal: 15,
+              vertical: 6,
             ),
             decoration: AppDecoration.fillGray10001.copyWith(
               borderRadius: BorderRadiusStyle.roundedBorder6,
@@ -55,7 +55,7 @@ class ListcanteenfoodItemWidget extends StatelessWidget {
                       style: CustomTextStyles.titleSmallMedium,
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 95.h),
+                      padding: EdgeInsets.only(),
                       child: Text(
                         "lbl_28_10".tr,
                         style: CustomTextStyles.titleSmallMedium,
@@ -63,12 +63,12 @@ class ListcanteenfoodItemWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 7.v),
+                SizedBox(height: 7),
                 Text(
                   "msg_september_22_2023".tr,
                   style: CustomTextStyles.bodySmallBluegray400,
                 ),
-                SizedBox(height: 1.v),
+                SizedBox(height: 1),
               ],
             ),
           ),

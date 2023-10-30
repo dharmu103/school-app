@@ -15,16 +15,16 @@ class VendorHpOneDraweritem extends StatelessWidget {
 
     return Drawer(
       child: Container(
-        width: 311.h,
+        width: 311,
         padding: EdgeInsets.symmetric(
-          horizontal: 24.h,
-          vertical: 17.v,
+          horizontal: 24,
+          vertical: 17,
         ),
         decoration: AppDecoration.fillOnErrorContainer,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 40.v),
+            SizedBox(height: 40),
             CustomImageView(
               svgPath: ImageConstant.imgArrowrightOnprimary,
               height: 20.adaptSize,
@@ -36,8 +36,8 @@ class VendorHpOneDraweritem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 18.h,
-                top: 48.v,
+                left: 18,
+                top: 48,
               ),
               child: GestureDetector(
                 onTap: () {
@@ -51,8 +51,8 @@ class VendorHpOneDraweritem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 18.h,
-                top: 24.v,
+                left: 18,
+                top: 24,
               ),
               child: GestureDetector(
                 onTap: () {
@@ -66,8 +66,8 @@ class VendorHpOneDraweritem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 18.h,
-                top: 24.v,
+                left: 18,
+                top: 24,
               ),
               child: GestureDetector(
                 onTap: () {
@@ -81,8 +81,8 @@ class VendorHpOneDraweritem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 18.h,
-                top: 26.v,
+                left: 18,
+                top: 26,
               ),
               child: GestureDetector(
                 onTap: () {
@@ -94,12 +94,12 @@ class VendorHpOneDraweritem extends StatelessWidget {
                   children: [
                     CustomImageView(
                       svgPath: ImageConstant.imgFileOnprimarycontainer,
-                      height: 16.v,
-                      width: 20.h,
-                      margin: EdgeInsets.only(bottom: 5.v),
+                      height: 16,
+                      width: 20,
+                      margin: EdgeInsets.only(bottom: 5),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 14.h),
+                      padding: EdgeInsets.only(left: 14),
                       child: Text(
                         "lbl_logout".tr,
                         style: CustomTextStyles.titleSmallRedA700,

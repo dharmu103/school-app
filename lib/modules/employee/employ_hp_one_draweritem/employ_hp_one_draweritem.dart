@@ -16,11 +16,8 @@ class EmployDraweritem extends StatelessWidget {
 
     return Drawer(
       child: Container(
-        width: 350.h,
-        padding: EdgeInsets.symmetric(
-          horizontal: 14.h,
-          vertical: 58.v,
-        ),
+        width: 350,
+        padding: EdgeInsets.only(left: 14, top: 40),
         decoration: AppDecoration.fillOnErrorContainer,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,20 +35,20 @@ class EmployDraweritem extends StatelessWidget {
                         height: 104.adaptSize,
                         width: 104.adaptSize,
                         radius: BorderRadius.circular(
-                          52.h,
+                          52,
                         ),
                       ),
-                      SizedBox(height: 8.v),
+                      SizedBox(height: 8),
                       Text(
                         "lbl_poonam_saini".tr,
                         style: CustomTextStyles.titleLargeOnPrimary,
                       ),
-                      SizedBox(height: 1.v),
+                      SizedBox(height: 1),
                       Text(
                         "msg_i_card_no_112".tr,
                         style: CustomTextStyles.bodySmallOnPrimaryContainer,
                       ),
-                      SizedBox(height: 5.v),
+                      SizedBox(height: 5),
                       Align(
                         alignment: Alignment.center,
                         child: Text(
@@ -66,21 +63,24 @@ class EmployDraweritem extends StatelessWidget {
                     height: 20.adaptSize,
                     width: 20.adaptSize,
                     margin: EdgeInsets.only(
-                      left: 40.h,
-                      bottom: 143.v,
+                      left: 40,
+                      bottom: 143,
                     ),
                     onTap: () {
                       Get.back();
                     },
                   ),
+                  SizedBox(
+                    width: 14,
+                  )
                 ],
               ),
             ),
-            SizedBox(height: 5.v),
+            SizedBox(height: 5),
             Padding(
               padding: EdgeInsets.only(
-                left: 18.h,
-                top: 42.v,
+                left: 18,
+                top: 42,
               ),
               child: InkWell(
                 onTap: () {
@@ -90,12 +90,12 @@ class EmployDraweritem extends StatelessWidget {
                   children: [
                     CustomImageView(
                       svgPath: ImageConstant.imgFileOnprimarycontainer,
-                      height: 21.v,
-                      width: 16.h,
-                      margin: EdgeInsets.only(bottom: 1.v),
+                      height: 21,
+                      width: 16,
+                      margin: EdgeInsets.only(bottom: 1),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 18.h),
+                      padding: EdgeInsets.only(left: 18),
                       child: Text(
                         "lbl_attendence".tr,
                         style: CustomTextStyles.titleSmallOnPrimary,
@@ -108,8 +108,8 @@ class EmployDraweritem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 18.h,
-                top: 27.v,
+                left: 18,
+                top: 27,
               ),
               child: GestureDetector(
                 onTap: () {
@@ -119,12 +119,12 @@ class EmployDraweritem extends StatelessWidget {
                   children: [
                     CustomImageView(
                       svgPath: ImageConstant.imgCheckmark,
-                      height: 20.v,
-                      width: 16.h,
-                      margin: EdgeInsets.only(bottom: 3.v),
+                      height: 20,
+                      width: 16,
+                      margin: EdgeInsets.only(bottom: 3),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 17.h),
+                      padding: EdgeInsets.only(left: 17),
                       child: Text(
                         "Upload Curricular".tr,
                         style: CustomTextStyles.titleSmallOnPrimary,
@@ -137,8 +137,8 @@ class EmployDraweritem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 18.h,
-                top: 27.v,
+                left: 18,
+                top: 27,
               ),
               child: GestureDetector(
                 onTap: () {
@@ -148,12 +148,12 @@ class EmployDraweritem extends StatelessWidget {
                   children: [
                     CustomImageView(
                       svgPath: ImageConstant.imgCheckmark,
-                      height: 20.v,
-                      width: 16.h,
-                      margin: EdgeInsets.only(bottom: 3.v),
+                      height: 20,
+                      width: 16,
+                      margin: EdgeInsets.only(bottom: 3),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 17.h),
+                      padding: EdgeInsets.only(left: 17),
                       child: Text(
                         "Upload Result".tr,
                         style: CustomTextStyles.titleSmallOnPrimary,
@@ -166,8 +166,8 @@ class EmployDraweritem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 18.h,
-                top: 28.v,
+                left: 18,
+                top: 28,
               ),
               child: GestureDetector(
                 onTap: () {
@@ -177,12 +177,12 @@ class EmployDraweritem extends StatelessWidget {
                   children: [
                     CustomImageView(
                       svgPath: ImageConstant.imgMenuOnprimarycontainer,
-                      height: 21.v,
-                      width: 16.h,
-                      margin: EdgeInsets.only(bottom: 1.v),
+                      height: 21,
+                      width: 16,
+                      margin: EdgeInsets.only(bottom: 1),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 18.h),
+                      padding: EdgeInsets.only(left: 18),
                       child: Text(
                         "Upload Assignment".tr,
                         style: CustomTextStyles.titleSmallOnPrimary,
@@ -195,8 +195,8 @@ class EmployDraweritem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 17.h,
-                top: 26.v,
+                left: 17,
+                top: 26,
               ),
               child: GestureDetector(
                 onTap: () {
@@ -206,11 +206,11 @@ class EmployDraweritem extends StatelessWidget {
                   children: [
                     CustomImageView(
                       svgPath: ImageConstant.imgSave,
-                      height: 21.v,
-                      width: 17.h,
+                      height: 21,
+                      width: 17,
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 17.h),
+                      padding: EdgeInsets.only(left: 17),
                       child: Text(
                         "lbl_student_contact".tr,
                         style: CustomTextStyles.titleSmallOnPrimary,
@@ -223,9 +223,9 @@ class EmployDraweritem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 16.h,
-                top: 29.v,
-                right: 32.h,
+                left: 16,
+                top: 29,
+                right: 32,
               ),
               child: GestureDetector(
                 onTap: () {
@@ -235,12 +235,12 @@ class EmployDraweritem extends StatelessWidget {
                   children: [
                     CustomImageView(
                       svgPath: ImageConstant.imgMail,
-                      height: 18.v,
-                      width: 20.h,
-                      margin: EdgeInsets.only(bottom: 4.v),
+                      height: 18,
+                      width: 20,
+                      margin: EdgeInsets.only(bottom: 4),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 16.h),
+                      padding: EdgeInsets.only(left: 16),
                       child: Text(
                         "Assignment Status".tr,
                         style: CustomTextStyles.titleSmallOnPrimary,
@@ -253,9 +253,9 @@ class EmployDraweritem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 16.h,
-                top: 29.v,
-                right: 32.h,
+                left: 16,
+                top: 29,
+                right: 32,
               ),
               child: GestureDetector(
                 onTap: () {
@@ -265,12 +265,12 @@ class EmployDraweritem extends StatelessWidget {
                   children: [
                     CustomImageView(
                       svgPath: ImageConstant.imgMail,
-                      height: 18.v,
-                      width: 20.h,
-                      margin: EdgeInsets.only(bottom: 4.v),
+                      height: 18,
+                      width: 20,
+                      margin: EdgeInsets.only(bottom: 4),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 16.h),
+                      padding: EdgeInsets.only(left: 16),
                       child: Text(
                         "Upload Assignment Status".tr,
                         style: CustomTextStyles.titleSmallOnPrimary,
@@ -283,9 +283,9 @@ class EmployDraweritem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 18.h,
-                top: 30.v,
-                bottom: 30.v,
+                left: 18,
+                top: 30,
+                bottom: 30,
               ),
               child: GestureDetector(
                 onTap: () {
@@ -297,12 +297,12 @@ class EmployDraweritem extends StatelessWidget {
                   children: [
                     CustomImageView(
                       svgPath: ImageConstant.imgFile,
-                      height: 16.v,
-                      width: 20.h,
-                      margin: EdgeInsets.only(bottom: 5.v),
+                      height: 16,
+                      width: 20,
+                      margin: EdgeInsets.only(bottom: 5),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 14.h),
+                      padding: EdgeInsets.only(left: 14),
                       child: Text(
                         "lbl_logout".tr,
                         style: CustomTextStyles.titleSmallRedA700,

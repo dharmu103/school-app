@@ -16,10 +16,10 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
 
     return Drawer(
       child: Container(
-        width: 311.h,
+        width: 311,
         padding: EdgeInsets.symmetric(
-          horizontal: 19.h,
-          vertical: 16.v,
+          horizontal: 19,
+          vertical: 16,
         ),
         decoration: AppDecoration.fillOnErrorContainer,
         child: Column(
@@ -34,12 +34,12 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               width: 20.adaptSize,
               alignment: Alignment.centerRight,
               margin: EdgeInsets.only(
-                top: 41.v,
-                right: 5.h,
+                top: 41,
+                right: 5,
               ),
             ),
             SizedBox(
-              height: 12.v,
+              height: 12,
             ),
             GestureDetector(
               onTap: () {
@@ -47,8 +47,8 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               },
               child: Padding(
                 padding: EdgeInsets.only(
-                  left: 23.h,
-                  top: 12.v,
+                  left: 23,
+                  top: 12,
                 ),
                 child: Text(
                   "lbl_transactions".tr,
@@ -57,10 +57,10 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 18.v),
+              padding: EdgeInsets.only(top: 18),
               child: Divider(
                 color: appTheme.gray50001,
-                endIndent: 6.h,
+                endIndent: 6,
               ),
             ),
             GestureDetector(
@@ -69,8 +69,8 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               },
               child: Padding(
                 padding: EdgeInsets.only(
-                  left: 23.h,
-                  top: 11.v,
+                  left: 23,
+                  top: 11,
                 ),
                 child: Text(
                   "lbl_attendance".tr,
@@ -79,10 +79,10 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 13.v),
+              padding: EdgeInsets.only(top: 13),
               child: Divider(
                 color: appTheme.gray50001,
-                endIndent: 6.h,
+                endIndent: 6,
               ),
             ),
             GestureDetector(
@@ -91,8 +91,8 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               },
               child: Padding(
                 padding: EdgeInsets.only(
-                  left: 23.h,
-                  top: 12.v,
+                  left: 23,
+                  top: 12,
                 ),
                 child: Text(
                   "lbl_circulars".tr,
@@ -101,10 +101,10 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 14.v),
+              padding: EdgeInsets.only(top: 14),
               child: Divider(
                 color: appTheme.gray50001,
-                endIndent: 6.h,
+                endIndent: 6,
               ),
             ),
             GestureDetector(
@@ -113,8 +113,8 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               },
               child: Padding(
                 padding: EdgeInsets.only(
-                  left: 23.h,
-                  top: 12.v,
+                  left: 23,
+                  top: 12,
                 ),
                 child: Text(
                   "Updates".tr,
@@ -123,10 +123,10 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 14.v),
+              padding: EdgeInsets.only(top: 14),
               child: Divider(
                 color: appTheme.gray50001,
-                endIndent: 6.h,
+                endIndent: 6,
               ),
             ),
             GestureDetector(
@@ -135,8 +135,8 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               },
               child: Padding(
                 padding: EdgeInsets.only(
-                  left: 23.h,
-                  top: 12.v,
+                  left: 23,
+                  top: 12,
                 ),
                 child: Text(
                   "lbl_worksheets".tr,
@@ -145,18 +145,18 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 14.v),
+              padding: EdgeInsets.only(top: 14),
               child: Divider(
                 color: appTheme.gray50001,
-                endIndent: 6.h,
+                endIndent: 6,
               ),
             ),
             GestureDetector(
               onTap: () => Get.toNamed(AppRoutes.studentTestReportScreen),
               child: Padding(
                 padding: EdgeInsets.only(
-                  left: 23.h,
-                  top: 13.v,
+                  left: 23,
+                  top: 13,
                 ),
                 child: Text(
                   "lbl_test_reports".tr,
@@ -165,18 +165,18 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 12.v),
+              padding: EdgeInsets.only(top: 12),
               child: Divider(
                 color: appTheme.gray50001,
-                endIndent: 6.h,
+                endIndent: 6,
               ),
             ),
             GestureDetector(
               onTap: () => Get.toNamed(AppRoutes.studentIssueScreen),
               child: Padding(
                 padding: EdgeInsets.only(
-                  left: 23.h,
-                  top: 11.v,
+                  left: 23,
+                  top: 11,
                 ),
                 child: Text(
                   "Raise an issue".tr,
@@ -185,16 +185,16 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 14.v),
+              padding: EdgeInsets.only(top: 14),
               child: Divider(
                 color: appTheme.gray50001,
-                endIndent: 6.h,
+                endIndent: 6,
               ),
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 23.h,
-                top: 11.v,
+                left: 23,
+                top: 11,
               ),
               child: Text(
                 "Privacy Policy".tr,
@@ -202,10 +202,10 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 14.v),
+              padding: EdgeInsets.only(top: 14),
               child: Divider(
                 color: appTheme.gray50001,
-                endIndent: 6.h,
+                endIndent: 6,
               ),
             ),
             GestureDetector(
@@ -215,20 +215,20 @@ class HomeScreenFiveDraweritem extends StatelessWidget {
               },
               child: Padding(
                 padding: EdgeInsets.only(
-                  left: 23.h,
-                  top: 15.v,
+                  left: 23,
+                  top: 15,
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CustomImageView(
                       svgPath: ImageConstant.imgFile,
-                      height: 16.v,
-                      width: 20.h,
-                      margin: EdgeInsets.only(bottom: 5.v),
+                      height: 16,
+                      width: 20,
+                      margin: EdgeInsets.only(bottom: 5),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 14.h),
+                      padding: EdgeInsets.only(left: 14),
                       child: Text(
                         "lbl_logout".tr,
                         style: CustomTextStyles.titleSmallRedA700,

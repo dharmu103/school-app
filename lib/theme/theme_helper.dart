@@ -55,7 +55,7 @@ class ThemeHelper {
           disabledBackgroundColor: appTheme.blueGray50,
           backgroundColor: colorScheme.primary,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.h),
+            borderRadius: BorderRadius.circular(10),
           ),
           visualDensity: const VisualDensity(
             vertical: -4,

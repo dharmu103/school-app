@@ -31,8 +31,8 @@ class _SignupScreenState extends State<SignupScreen> {
             appBar: AppBar(
                 backgroundColor: Colors.transparent,
                 elevation: 0,
-                toolbarHeight: 50.v,
-                leadingWidth: 48.h,
+                toolbarHeight: 50,
+                leadingWidth: 48,
                 leading: IconButton(
                   onPressed: () {
                     onTapArrowleft();
@@ -51,13 +51,13 @@ class _SignupScreenState extends State<SignupScreen> {
                   key: _formKey,
                   child: Container(
                       width: double.maxFinite,
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 24.h, vertical: 22.v),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 24, vertical: 22),
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("Name".tr, style: theme.textTheme.bodyMedium),
-                            SizedBox(height: 9.v),
+                            SizedBox(height: 9),
                             CustomTextFormField(
                                 //   controller: controller.emailController,
                                 hintText: "Your name".tr,
@@ -70,10 +70,10 @@ class _SignupScreenState extends State<SignupScreen> {
                                   }
                                   return null;
                                 }),
-                            SizedBox(height: 16.v),
+                            SizedBox(height: 16),
                             Text("lbl_email".tr,
                                 style: theme.textTheme.bodyMedium),
-                            SizedBox(height: 9.v),
+                            SizedBox(height: 9),
                             CustomTextFormField(
                                 //   controller: controller.emailController,
                                 hintText: "msg_lanlordjones_email_com".tr,
@@ -86,10 +86,10 @@ class _SignupScreenState extends State<SignupScreen> {
                                   }
                                   return null;
                                 }),
-                            SizedBox(height: 16.v),
+                            SizedBox(height: 16),
                             Text("lbl_password".tr,
                                 style: theme.textTheme.bodyMedium),
-                            SizedBox(height: 9.v),
+                            SizedBox(height: 9),
                             CustomTextFormField(
                                 //   controller: controller.emailController,
                                 hintText: "msg_lanlordjones_email_com".tr,
@@ -102,10 +102,10 @@ class _SignupScreenState extends State<SignupScreen> {
                                   }
                                   return null;
                                 }),
-                            SizedBox(height: 16.v),
+                            SizedBox(height: 16),
                             Text("Phone Number".tr,
                                 style: theme.textTheme.bodyMedium),
-                            SizedBox(height: 9.v),
+                            SizedBox(height: 9),
                             CustomTextFormField(
                                 //   controller: controller.emailController,
                                 hintText: "+919876543210".tr,
@@ -118,10 +118,10 @@ class _SignupScreenState extends State<SignupScreen> {
                                   }
                                   return null;
                                 }),
-                            SizedBox(height: 16.v),
+                            SizedBox(height: 16),
                             Text("School Name".tr,
                                 style: theme.textTheme.bodyMedium),
-                            SizedBox(height: 9.v),
+                            SizedBox(height: 9),
                             CustomTextFormField(
                                 //   controller: controller.emailController,
                                 hintText: "abc public school".tr,
@@ -134,12 +134,12 @@ class _SignupScreenState extends State<SignupScreen> {
                                   }
                                   return null;
                                 }),
-                            SizedBox(height: 16.v),
+                            SizedBox(height: 16),
                             Text("Gender".tr,
                                 style: theme.textTheme.bodyMedium),
-                            SizedBox(height: 9.v),
+                            SizedBox(height: 9),
                             Container(
-                              height: 48.v,
+                              height: 48,
                               child: DropdownButtonHideUnderline(
                                 child: DropdownButton2(
                                   hint: Padding(
@@ -195,7 +195,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 16.v),
+                            SizedBox(height: 16),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -204,7 +204,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                   children: [
                                     Text("Class".tr,
                                         style: theme.textTheme.bodyMedium),
-                                    SizedBox(height: 9.v),
+                                    SizedBox(height: 9),
                                     // CustomTextFormField(
                                     //   alignment: Alignment.center,
                                     //   hintText: "1",
@@ -218,7 +218,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                     //   width: Get.width * 0.43,
                                     // )
                                     Container(
-                                      height: 48.v,
+                                      height: 48,
                                       decoration:
                                           AppDecoration.outlineGray.copyWith(
                                         color:
@@ -267,9 +267,9 @@ class _SignupScreenState extends State<SignupScreen> {
                                   children: [
                                     Text("Section".tr,
                                         style: theme.textTheme.bodyMedium),
-                                    SizedBox(height: 9.v),
+                                    SizedBox(height: 9),
                                     Container(
-                                      height: 48.v,
+                                      height: 48,
                                       width: Get.width * 0.43,
                                       child: DropdownButtonHideUnderline(
                                         child: DropdownButton2(
@@ -281,7 +281,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                                     .bodyMediumBluegray200),
                                           ),
                                           buttonStyleData: ButtonStyleData(
-                                              height: 48.v,
+                                              height: 48,
                                               width: Get.width,
                                               decoration: AppDecoration
                                                   .outlineGray
@@ -343,7 +343,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 )
                               ],
                             ),
-                            SizedBox(height: 16.v),
+                            SizedBox(height: 16),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -383,13 +383,13 @@ class _SignupScreenState extends State<SignupScreen> {
                                 )
                               ],
                             ),
-                            SizedBox(height: 29.v),
+                            SizedBox(height: 29),
                             CustomElevatedButton(
                               isDisabled: !agreeTerm,
                               text: "Sign up".tr,
                               onTap: () async {},
                             ),
-                            SizedBox(height: 5.v)
+                            SizedBox(height: 5)
                           ]))),
             )));
   }

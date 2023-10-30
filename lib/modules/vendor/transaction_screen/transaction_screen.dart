@@ -1,3 +1,4 @@
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:school_app/modules/vendor/vendor_hp_one_draweritem/vendor_hp_one_draweritem.dart';
 import 'package:school_app/widgets/vendor_app_bar.dart';
@@ -28,7 +29,7 @@ class TransactionScreen extends GetWidget<TransactionController> {
             body: Container(
                 width: Get.width,
                 // height: Get.height,
-                //   padding: EdgeInsets.only(top: 53.v),
+                //   padding: EdgeInsets.only(top: 53),
                 decoration: BoxDecoration(
                   color: Colors.black,
                   gradient: LinearGradient(
@@ -61,22 +62,22 @@ class TransactionScreen extends GetWidget<TransactionController> {
                     ),
                     CustomImageView(
                       svgPath: ImageConstant.imgStarpattern,
-                      height: 62.v,
-                      width: 333.h,
+                      height: 62,
+                      width: 333,
                       alignment: Alignment.topCenter,
-                      margin: EdgeInsets.only(top: 116.v),
+                      margin: EdgeInsets.only(top: 116),
                     ),
                     CustomImageView(
                       svgPath: ImageConstant.imgStarpattern,
-                      height: 62.v,
-                      width: 333.h,
+                      height: 62,
+                      width: 333,
                       alignment: Alignment.topCenter,
-                      margin: EdgeInsets.only(top: 70.v),
+                      margin: EdgeInsets.only(top: 70),
                     ),
                     Container(
                       width: Get.width,
                       height: Get.height,
-                      margin: EdgeInsets.only(top: 93.v),
+                      margin: EdgeInsets.only(top: 93),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadiusStyle.roundedBorderUp25,
@@ -87,11 +88,11 @@ class TransactionScreen extends GetWidget<TransactionController> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             SizedBox(
-                              height: 25.v,
+                              height: 25,
                             ),
                             Padding(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 24.h, vertical: 10.v),
+                                  horizontal: 24, vertical: 10),
                               child: IntrinsicHeight(
                                 child: Row(
                                   crossAxisAlignment:
@@ -101,11 +102,9 @@ class TransactionScreen extends GetWidget<TransactionController> {
                                   children: [
                                     Expanded(
                                       child: Container(
-                                        // height: 112.v,
+                                        // height: 112,
                                         padding: EdgeInsets.only(
-                                            left: 20.h,
-                                            top: 14.v,
-                                            bottom: 12.v),
+                                            left: 20, top: 14, bottom: 12),
                                         decoration: AppDecoration.fillGray10001
                                             .copyWith(
                                           borderRadius:
@@ -132,15 +131,13 @@ class TransactionScreen extends GetWidget<TransactionController> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 15.h,
+                                      width: 15,
                                     ),
                                     Expanded(
                                       child: Container(
-                                        // height: 100.v,
+                                        // height: 100,
                                         padding: EdgeInsets.only(
-                                            left: 20.h,
-                                            top: 14.v,
-                                            bottom: 12.v),
+                                            left: 20, top: 14, bottom: 12),
                                         decoration: AppDecoration.fillGray100
                                             .copyWith(
                                                 borderRadius:
@@ -170,14 +167,11 @@ class TransactionScreen extends GetWidget<TransactionController> {
                               ),
                             ),
                             SizedBox(
-                              height: 15.v,
+                              height: 15,
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                  left: 24.h,
-                                  top: 18.v,
-                                  bottom: 15.v,
-                                  right: 24.h),
+                                  left: 24, top: 18, bottom: 15, right: 24),
                               child: Row(
                                 children: [
                                   Text(
@@ -189,24 +183,24 @@ class TransactionScreen extends GetWidget<TransactionController> {
                                   ),
                                   Spacer(),
                                   Container(
-                                    width: 100.h,
+                                    width: 100,
                                     alignment: Alignment.center,
-                                    height: 30.v,
+                                    height: 30,
                                     decoration:
                                         AppDecoration.fillGray30001.copyWith(
                                       color: appTheme.cyan50,
                                       borderRadius:
                                           BorderRadiusStyle.roundedBorder6,
                                     ),
-                                    child: DropdownButton(
+                                    child: DropdownButton2(
                                         alignment: Alignment.centerRight,
-                                        padding: EdgeInsets.only(
-                                            right: 10, left: 10),
+                                        // padding: EdgeInsets.only(
+                                        //     right: 10, left: 10),
                                         underline: SizedBox(),
-                                        icon: CustomImageView(
-                                            margin: EdgeInsets.only(left: 10),
-                                            svgPath: ImageConstant
-                                                .imgArrowdownPrimary),
+                                        // icon: CustomImageView(
+                                        //     margin: EdgeInsets.only(left: 10),
+                                        //     svgPath: ImageConstant
+                                        //         .imgArrowdownPrimary),
                                         items: [
                                           DropdownMenuItem(
                                               alignment: Alignment.centerLeft,
@@ -229,7 +223,7 @@ class TransactionScreen extends GetWidget<TransactionController> {
                                 itemBuilder: (itemBuilder, index) {
                                   return Padding(
                                     padding: EdgeInsets.symmetric(
-                                        vertical: 8.v, horizontal: 24.h),
+                                        vertical: 8, horizontal: 24),
                                     child: ListcanteenfoodItemWidget(),
                                   );
                                 })

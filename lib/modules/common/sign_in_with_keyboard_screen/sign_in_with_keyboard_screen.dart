@@ -23,8 +23,8 @@ class SignInWithKeyboardScreen extends GetWidget<SignInWithKeyboardController> {
             appBar: AppBar(
                 backgroundColor: Colors.transparent,
                 elevation: 0,
-                toolbarHeight: 50.v,
-                leadingWidth: 48.h,
+                toolbarHeight: 50,
+                leadingWidth: 48,
                 leading: IconButton(
                   onPressed: () {
                     onTapArrowleft();
@@ -42,14 +42,13 @@ class SignInWithKeyboardScreen extends GetWidget<SignInWithKeyboardController> {
                 key: _formKey,
                 child: Container(
                     width: double.maxFinite,
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 24.h, vertical: 22.v),
+                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 22),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text("lbl_email".tr,
                               style: theme.textTheme.bodyMedium),
-                          SizedBox(height: 9.v),
+                          SizedBox(height: 9),
                           CustomTextFormField(
                               controller: controller.emailController,
                               hintText: "msg_lanlordjones_email_com".tr,
@@ -61,18 +60,18 @@ class SignInWithKeyboardScreen extends GetWidget<SignInWithKeyboardController> {
                                 }
                                 return null;
                               }),
-                          SizedBox(height: 16.v),
+                          SizedBox(height: 16),
                           Text("lbl_password".tr,
                               style: theme.textTheme.bodyMedium),
-                          SizedBox(height: 8.v),
+                          SizedBox(height: 8),
                           CustomTextFormField(
                               controller: controller.passwordController,
                               textInputAction: TextInputAction.done,
                               obscureText: true),
-                          SizedBox(height: 18.v),
+                          SizedBox(height: 18),
                           Text("msg_forgot_password".tr,
                               style: CustomTextStyles.bodyMediumPrimary),
-                          SizedBox(height: 29.v),
+                          SizedBox(height: 29),
                           CustomElevatedButton(
                             text: "lbl_log_in".tr,
                             onTap: () async {
@@ -86,7 +85,7 @@ class SignInWithKeyboardScreen extends GetWidget<SignInWithKeyboardController> {
                               //   }
                             },
                           ),
-                          SizedBox(height: 5.v),
+                          SizedBox(height: 5),
                           PrefUtils.sharedPreferences?.getString("login_as") ==
                                   'lbl_student'.tr
                               ? Row(

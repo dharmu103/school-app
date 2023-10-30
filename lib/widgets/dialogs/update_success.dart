@@ -6,8 +6,8 @@ import 'package:school_app/widgets/custom_elevated_button.dart';
 import 'package:school_app/widgets/custom_image_view.dart';
 
 class UpdateDailogWidget extends StatelessWidget {
-  const UpdateDailogWidget({super.key});
-
+  const UpdateDailogWidget({super.key, this.onTap});
+  final onTap;
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -18,20 +18,20 @@ class UpdateDailogWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             SizedBox(
-              height: 20.v,
+              height: 20,
             ),
             CustomImageView(
               imagePath: "assets/images/ok_png.png",
             ),
             SizedBox(
-              height: 20.v,
+              height: 20,
             ),
             Text(
-              "Upload Success",
+              "Update Success",
               style: CustomTextStyles.titleMediumBlack900,
             ),
             SizedBox(
-              height: 5.v,
+              height: 5,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -42,13 +42,14 @@ class UpdateDailogWidget extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10.v,
+              height: 10,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CustomElevatedButton(
                 onTap: () {
                   Get.back();
+                  Get.toNamed(AppRoutes.homeScreen);
                 },
                 text: "Close",
                 buttonTextStyle: CustomTextStyles.titleSmallPrimary,
@@ -56,7 +57,7 @@ class UpdateDailogWidget extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10.v,
+              height: 10,
             ),
           ],
         ),

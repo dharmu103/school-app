@@ -17,7 +17,7 @@ class UpdatesScreen extends GetView<UpdatesController> {
           extendBodyBehindAppBar: true,
           appBar: CustomAppBar(
             leading: CustomImageView(
-                margin: EdgeInsets.only(left: 24.h),
+                margin: EdgeInsets.only(left: 24),
                 onTap: () {
                   Get.toNamed(AppRoutes.homeScreen);
                 },
@@ -27,7 +27,7 @@ class UpdatesScreen extends GetView<UpdatesController> {
           body: Container(
               width: Get.width,
               // height: Get.height,
-              //   padding: EdgeInsets.only(top: 53.v),
+              //   padding: EdgeInsets.only(top: 53),
               decoration: BoxDecoration(
                 color: Colors.black,
                 gradient: LinearGradient(
@@ -60,21 +60,21 @@ class UpdatesScreen extends GetView<UpdatesController> {
                   ),
                   CustomImageView(
                     svgPath: ImageConstant.imgStarpattern,
-                    height: 62.v,
-                    width: 333.h,
+                    height: 62,
+                    width: 333,
                     alignment: Alignment.topCenter,
-                    margin: EdgeInsets.only(top: 116.v),
+                    margin: EdgeInsets.only(top: 116),
                   ),
                   CustomImageView(
                     svgPath: ImageConstant.imgStarpattern,
-                    height: 62.v,
-                    width: 333.h,
+                    height: 62,
+                    width: 333,
                     alignment: Alignment.topCenter,
-                    margin: EdgeInsets.only(top: 70.v),
+                    margin: EdgeInsets.only(top: 70),
                   ),
                   Container(
                     width: Get.width,
-                    margin: EdgeInsets.only(top: 93.v),
+                    margin: EdgeInsets.only(top: 93),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadiusStyle.roundedBorderUp25,

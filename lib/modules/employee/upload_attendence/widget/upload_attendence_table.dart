@@ -9,7 +9,7 @@ Widget uploadAttendenceTable() {
   return Container(
     width: Get.width,
     child: DataTable(
-        headingRowHeight: 0.v,
+        headingRowHeight: 0,
         headingRowColor: MaterialStatePropertyAll(theme.colorScheme.primary),
         headingTextStyle:
             theme.textTheme.labelLarge?.copyWith(color: Colors.white),
@@ -34,7 +34,7 @@ Widget uploadAttendenceTable() {
           return DataRow(
             cells: [
               DataCell(Container(
-                width: 210.h,
+                width: 210,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -48,7 +48,7 @@ Widget uploadAttendenceTable() {
                 ),
               )),
               DataCell(Padding(
-                  padding: EdgeInsets.only(right: 26.h),
+                  padding: EdgeInsets.only(right: 26),
                   child: GetBuilder<UploadAttendenceController>(
                     builder: (_) {
                       return Container(

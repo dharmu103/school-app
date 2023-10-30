@@ -25,13 +25,13 @@ class HomeScreen extends GetWidget<HomeScreenController> {
           appBar: AppBar(
             systemOverlayStyle:
                 SystemUiOverlayStyle(statusBarColor: theme.colorScheme.primary),
-            toolbarHeight: 93.v,
+            toolbarHeight: 93,
             elevation: 0,
             backgroundColor: Colors.transparent,
-            leadingWidth: 80.h,
+            leadingWidth: 80,
             leading: Container(
               margin: EdgeInsets.only(
-                left: 24.h,
+                left: 24,
                 top: 16,
                 bottom: 16,
               ),
@@ -54,7 +54,7 @@ class HomeScreen extends GetWidget<HomeScreenController> {
             actions: [
               CustomImageView(
                 svgPath: ImageConstant.imgMenuburger,
-                margin: EdgeInsets.only(right: 24.h),
+                margin: EdgeInsets.only(right: 24),
                 onTap: () {
                   _key.currentState?.openEndDrawer();
                 },
@@ -69,7 +69,7 @@ class HomeScreen extends GetWidget<HomeScreenController> {
           body: Container(
               width: Get.width,
               // height: Get.height,
-              //   padding: EdgeInsets.only(top: 53.v),
+              //   padding: EdgeInsets.only(top: 53),
               decoration: BoxDecoration(
                 color: Colors.black,
                 gradient: LinearGradient(
@@ -102,21 +102,21 @@ class HomeScreen extends GetWidget<HomeScreenController> {
                   ),
                   CustomImageView(
                     svgPath: ImageConstant.imgStarpattern,
-                    height: 62.v,
-                    width: 333.h,
+                    height: 62,
+                    width: 333,
                     alignment: Alignment.topCenter,
-                    margin: EdgeInsets.only(top: 116.v),
+                    margin: EdgeInsets.only(top: 116),
                   ),
                   CustomImageView(
                     svgPath: ImageConstant.imgStarpattern,
-                    height: 62.v,
-                    width: 333.h,
+                    height: 62,
+                    width: 333,
                     alignment: Alignment.topCenter,
-                    margin: EdgeInsets.only(top: 70.v),
+                    margin: EdgeInsets.only(top: 70),
                   ),
                   Container(
                     width: Get.width,
-                    margin: EdgeInsets.only(top: 93.v),
+                    margin: EdgeInsets.only(top: 93),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadiusStyle.roundedBorderUp25,
@@ -127,8 +127,8 @@ class HomeScreen extends GetWidget<HomeScreenController> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(
-                                left: 24.h, top: 18.v, right: 12.h),
+                            padding:
+                                EdgeInsets.only(left: 24, top: 18, right: 12),
                             child: Row(
                               children: [
                                 Text(
@@ -170,10 +170,7 @@ class HomeScreen extends GetWidget<HomeScreenController> {
                           //       )),
                           Padding(
                             padding: EdgeInsets.only(
-                                left: 24.h,
-                                top: 18.v,
-                                bottom: 5.v,
-                                right: 10.h),
+                                left: 24, top: 18, bottom: 5, right: 10),
                             child: Row(
                               children: [
                                 Text(
