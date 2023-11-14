@@ -57,6 +57,7 @@ dependencies:
   cloud_firestore: ^4.11.0
   file_picker: ^6.0.0
   camera: ^0.10.5+5
+  jiffy: ^6.2.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
