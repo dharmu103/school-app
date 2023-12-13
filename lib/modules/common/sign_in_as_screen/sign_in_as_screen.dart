@@ -44,7 +44,7 @@ class SignInAsScreen extends GetWidget<SignInAsController> {
                       buttonStyle: controller.selectedButton == "lbl_student".tr
                           ? CustomButtonStyles.fillPrimaryTL28
                           : CustomButtonStyles.outLineBorderPrimary,
-                      onTap: () => controller.selectButton(
+                      onTap: () => controller.selectButtondebug(
                         "lbl_student".tr,
                       ),
                     ),
@@ -64,7 +64,7 @@ class SignInAsScreen extends GetWidget<SignInAsController> {
                           controller.selectedButton == "lbl_employee".tr
                               ? CustomButtonStyles.fillPrimaryTL28
                               : CustomButtonStyles.outLineBorderPrimary,
-                      onTap: () => controller.selectButton(
+                      onTap: () => controller.selectButtondebug(
                         "lbl_employee".tr,
                       ),
                     ),
@@ -83,7 +83,7 @@ class SignInAsScreen extends GetWidget<SignInAsController> {
                       buttonStyle: controller.selectedButton == "lbl_vendor".tr
                           ? CustomButtonStyles.fillPrimaryTL28
                           : CustomButtonStyles.outLineBorderPrimary,
-                      onTap: () => controller.selectButton(
+                      onTap: () => controller.selectButtondebug(
                         "lbl_vendor".tr,
                       ),
                     ),

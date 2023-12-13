@@ -12,26 +12,19 @@ class SignInAsController extends GetxController {
   selectButton(text) async {
     selectedButton = text;
     update();
-    DocumentSnapshot doc = await FirebaseFirestore.instance
-        .collection("appinfo")
-        .doc("latest")
-        .get();
-    print(doc);
-    if (doc.data() != null) {
-      Map<String, dynamic>? data = doc.data() as Map<String, dynamic>;
-      if (data["version"] == "1.0.0") {
-        PrefUtils.sharedPreferences?.setString("login_as", selectedButton!);
-        print(text);
 
-        Get.toNamed(AppRoutes.signInWithKeyboardScreen);
-      } else {
-        Get.snackbar("Error", "Please Contect Provider",
-            colorText: Colors.white, backgroundColor: Colors.red);
-      }
-    } else {
-      Get.snackbar("Error", "Please Contect Provider",
-          colorText: Colors.white, backgroundColor: Colors.red);
-    }
+    PrefUtils.sharedPreferences?.setString("login_as", selectedButton!);
+    print(text);
+
+    Get.toNamed(AppRoutes.signInWithKeyboardScreen);
+    //   } else {
+    //     Get.snackbar("Error", "Please Contect Provider",
+    //         colorText: Colors.white, backgroundColor: Colors.red);
+    //   }
+    // } else {
+    //   Get.snackbar("Error", "Please Contect Provider",
+    //       colorText: Colors.white, backgroundColor: Colors.red);
+    // }
   }
 
   selectButtondebug(text) {

@@ -179,12 +179,14 @@ class PassbookScreen extends GetWidget<TransactionController> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(
-                                left: 24,
-                              ),
+                              padding: EdgeInsets.only(left: 24, right: 28),
                               child: Row(
                                 children: [
                                   Text("October",
+                                      style:
+                                          CustomTextStyles.titleSmallPrimary),
+                                  Spacer(),
+                                  Text("Total : 140",
                                       style:
                                           CustomTextStyles.titleSmallPrimary),
                                 ],
@@ -203,13 +205,15 @@ class PassbookScreen extends GetWidget<TransactionController> {
                                   );
                                 }),
                             Padding(
-                              padding: EdgeInsets.only(
-                                top: 14,
-                                left: 24,
-                              ),
+                              padding:
+                                  EdgeInsets.only(top: 14, left: 24, right: 28),
                               child: Row(
                                 children: [
                                   Text("November",
+                                      style:
+                                          CustomTextStyles.titleSmallPrimary),
+                                  Spacer(),
+                                  Text("Total : 140",
                                       style:
                                           CustomTextStyles.titleSmallPrimary),
                                 ],

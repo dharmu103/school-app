@@ -300,24 +300,29 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
                                 selectionMode:
                                     DateRangePickerSelectionMode.single,
                                 monthCellStyle: DateRangePickerMonthCellStyle(
-                                    todayTextStyle:
-                                        CustomTextStyles.titleMediumBluegray900,
-                                    specialDatesTextStyle: CustomTextStyles
-                                        .titleMediumBluegray900
-                                        ?.copyWith(color: Colors.white),
-                                    specialDatesDecoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: appTheme.red700),
-                                    textStyle:
-                                        CustomTextStyles.titleMediumBluegray900,
-                                    weekendTextStyle:
-                                        CustomTextStyles.titleMediumRedA700,
-                                    //   leadingDatesTextStyle:
-                                    //       CustomTextStyles.bodyMedium13,
-                                    //   trailingDatesTextStyle:
-                                    //       CustomTextStyles.bodyMedium13,
-                                    blackoutDateTextStyle:
-                                        CustomTextStyles.titleMediumRedA700),
+                                  todayTextStyle:
+                                      CustomTextStyles.titleMediumBluegray900,
+                                  specialDatesTextStyle: CustomTextStyles
+                                      .titleMediumBluegray900
+                                      ?.copyWith(color: Colors.white),
+                                  specialDatesDecoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: appTheme.red700),
+                                  blackoutDatesDecoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: appTheme.gray600),
+                                  textStyle:
+                                      CustomTextStyles.titleMediumBluegray900,
+                                  weekendTextStyle:
+                                      CustomTextStyles.titleMediumRedA700,
+                                  //   leadingDatesTextStyle:
+                                  //       CustomTextStyles.bodyMedium13,
+                                  //   trailingDatesTextStyle:
+                                  //       CustomTextStyles.bodyMedium13,
+                                  blackoutDateTextStyle: CustomTextStyles
+                                      .titleMediumBluegray900
+                                      ?.copyWith(color: Colors.white),
+                                ),
                                 monthViewSettings:
                                     DateRangePickerMonthViewSettings(
                                         numberOfWeeksInView: 6,
@@ -330,9 +335,18 @@ class AttendenceScreen extends GetWidget<AttendenceController> {
                                         weekendDays: [
                                       7
                                     ],
+                                        blackoutDates: [
+                                      DateTime(2023, 10, 28),
+                                      DateTime(2023, 11, 17),
+                                      DateTime(2023, 12, 1),
+                                    ],
                                         specialDates: [
                                       DateTime(2023, 10, 10),
-                                      DateTime(2023, 10, 26)
+                                      DateTime(2023, 10, 26),
+                                      DateTime(2023, 11, 10),
+                                      DateTime(2023, 11, 25),
+                                      DateTime(2023, 12, 15),
+                                      DateTime(2023, 12, 25)
                                     ]),
                                 initialSelectedRange: PickerDateRange(
                                     DateTime.now()

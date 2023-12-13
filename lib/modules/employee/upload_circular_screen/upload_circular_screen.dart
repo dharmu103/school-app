@@ -108,7 +108,7 @@ class UploadCircularScreen extends GetWidget<UploadCircularController> {
             ])),
         bottomNavigationBar: CustomElevatedButton(
             onTap: () {
-              Get.dialog(UpdateDailogWidget());
+              Get.dialog(UpdateDailogWidgetTeacher());
             },
             text: "lbl_upload".tr,
             margin: EdgeInsets.only(left: 25, right: 25, bottom: 42)));

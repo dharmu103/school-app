@@ -112,7 +112,7 @@ class StudentTransactionScreen extends GetWidget<StudentTransactionController> {
                                       Text("John Smith",
                                           style: CustomTextStyles
                                               .titleMediumBlack900),
-                                      Text("₹500",
+                                      Text("Available Balence : ₹500",
                                           style: CustomTextStyles
                                               .titleMediumBlack900),
                                     ]),
